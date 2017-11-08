@@ -30,25 +30,25 @@ java.text.SimpleDateFormat df = new java.text.SimpleDateFormat()
 df.applyPattern('ddmmyyyyHHmmss')
 
 'เ�?ิดเ�?ราเ�?อร�?'
-WebUI.openBrowser('', FailureHandling.CONTINUE_ON_FAILURE)
+not_run: WebUI.openBrowser('', FailureHandling.CONTINUE_ON_FAILURE)
 
 '�?ยายห�?�?าต�?า�? เ�?ราเ�?อร�?'
-WebUI.maximizeWindow(FailureHandling.CONTINUE_ON_FAILURE)
+not_run: WebUI.maximizeWindow(FailureHandling.CONTINUE_ON_FAILURE)
 
 'เ�?�?าสู�? URL'
-WebUI.navigateToUrl('192.168.11.59', FailureHandling.CONTINUE_ON_FAILURE)
+not_run: WebUI.navigateToUrl('192.168.11.59', FailureHandling.CONTINUE_ON_FAILURE)
 
 'login'
-WebUI.click(findTestObject('Page_Guru TMDA/span_Login'), FailureHandling.CONTINUE_ON_FAILURE)
+not_run: WebUI.click(findTestObject('Page_Guru TMDA/span_Login'), FailureHandling.CONTINUE_ON_FAILURE)
 
 'login'
-WebUI.setText(findTestObject('Page_Guru TMDA (1)/input_ng-untouched ng-valid ng'), 'piew', FailureHandling.CONTINUE_ON_FAILURE)
+not_run: WebUI.setText(findTestObject('Page_Guru TMDA (1)/input_ng-untouched ng-valid ng'), 'piew', FailureHandling.CONTINUE_ON_FAILURE)
 
 'login'
-WebUI.setText(findTestObject('Page_Guru TMDA (1)/input_ng-untouched ng-pristine'), 'piew', FailureHandling.CONTINUE_ON_FAILURE)
+not_run: WebUI.setText(findTestObject('Page_Guru TMDA (1)/input_ng-untouched ng-pristine'), 'piew', FailureHandling.CONTINUE_ON_FAILURE)
 
 'login'
-WebUI.submit(findTestObject('Page_Guru TMDA (1)/button_Login'), FailureHandling.CONTINUE_ON_FAILURE)
+not_run: WebUI.submit(findTestObject('Page_Guru TMDA (1)/button_Login'), FailureHandling.CONTINUE_ON_FAILURE)
 
 '�?ลิ�?เม�?ู User Management'
 WebUI.click(findTestObject('Change role/Page_Guru TMDA/a_User Management'))

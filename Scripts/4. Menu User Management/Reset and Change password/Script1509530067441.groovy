@@ -21,25 +21,25 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
 'เปิดเบราเซอร์'
-WebUI.openBrowser('')
+not_run: WebUI.openBrowser('')
 
 'ขยายหน้าต่างเบราเซอร์'
-WebUI.maximizeWindow()
+not_run: WebUI.maximizeWindow()
 
 'เข้าสู่ URL'
-WebUI.navigateToUrl('192.168.11.59')
+not_run: WebUI.navigateToUrl('192.168.11.59')
 
 'Login'
-WebUI.click(findTestObject('Page_Guru TMDA/span_Login'))
+not_run: WebUI.click(findTestObject('Page_Guru TMDA/span_Login'))
 
 'Login'
-WebUI.setText(findTestObject('Page_Guru TMDA (1)/input_ng-untouched ng-valid ng'), 'Creme')
+not_run: WebUI.setText(findTestObject('Page_Guru TMDA (1)/input_ng-untouched ng-valid ng'), 'Creme')
 
 'Login'
-WebUI.setText(findTestObject('Page_Guru TMDA (1)/input_ng-untouched ng-pristine'), '1234')
+not_run: WebUI.setText(findTestObject('Page_Guru TMDA (1)/input_ng-untouched ng-pristine'), '1234')
 
 'Login'
-WebUI.submit(findTestObject('Page_Guru TMDA (1)/button_Login'))
+not_run: WebUI.submit(findTestObject('Page_Guru TMDA (1)/button_Login'))
 
 'เลือกเมนู User management'
 WebUI.click(findTestObject('reset password//a_User Management (1)'))
@@ -139,5 +139,5 @@ WebUI.submit(findTestObject('Page_Guru TMDA (1)/button_Login'))
 'ตรวจสอบเมนูปรากฎหลังเข้าสู่ระบบเสร็จสิ้น'
 WebUI.verifyElementPresent(findTestObject('reset password//a_Help (1)'), 5)
 
-WebUI.closeBrowser()
+not_run: WebUI.closeBrowser()
 

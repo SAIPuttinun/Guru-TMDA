@@ -21,7 +21,6 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
 'เปิดบราวเซอร์'
-<<<<<<< HEAD
 not_run: WebUI.openBrowser('')
 
 'ขยายหน้าต่างเบราเซอร์'
@@ -192,8 +191,6 @@ WebUI.verifyElementPresent(findTestObject('Upload File with labelling/div_row'),
 
 'ปิดบราวเซอร์'
 not_run: WebUI.closeBrowser()
-=======
-WebUI.openBrowser('')
 
 'ขยายหน้าต่างเบราเซอร์'
 WebUI.maximizeWindow(FailureHandling.STOP_ON_FAILURE)
@@ -358,6 +355,5 @@ WebUI.waitForElementNotPresent(findTestObject('Upload File with labelling//div_l
 WebUI.verifyElementPresent(findTestObject('Upload File with labelling/div_row'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
 'ปิดบราวเซอร์'
-WebUI.closeBrowser()
->>>>>>> branch 'master' of https://github.com/s3raphy/GuruTMDA.git
+not_run: WebUI.closeBrowser()
 
