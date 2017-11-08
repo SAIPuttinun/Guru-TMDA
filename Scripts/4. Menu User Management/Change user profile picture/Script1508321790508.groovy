@@ -20,7 +20,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-not_run: WebUI.openBrowser('')
+WebUI.openBrowser('')
 
 not_run: WebUI.maximizeWindow()
 
@@ -40,9 +40,12 @@ WebUI.setText(findTestObject('Change profile pic//input_ng-untouched ng-valid ng
 
 WebUI.click(findTestObject('Change profile pic//i_fa fa-pencil-square-o'))
 
-WebUI.uploadFile(findTestObject('Change profile pic/input_file-input'), 'C:\\Penguins.jpg')
+WebUI.uploadFile(findTestObject('Change profile pic/input_file-input (1)'), 'C:\\Penguins.jpg')
 
-WebUI.click(findTestObject('Change profile pic//button_SUBMIT'))
+WebUI.click(findTestObject('Change profile pic/button_SUBMIT (1)'))
+
+'ลบข้อความในกล่องข้อความ Password'
+WebUI.sendKeys(findTestObject('Change profile pic/button_SUBMIT (1)'), Keys.chord(Keys.ENTER), FailureHandling.STOP_ON_FAILURE)
 
 WebUI.verifyElementPresent(findTestObject('Change profile pic/div_Edit Profile Successful.'), 3, FailureHandling.CONTINUE_ON_FAILURE)
 

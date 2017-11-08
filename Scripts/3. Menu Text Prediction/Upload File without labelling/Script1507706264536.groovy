@@ -181,10 +181,10 @@ WebUI.waitForElementNotPresent(findTestObject('Page_Guru TMDA (6)/Page_Guru TMDA
     5, FailureHandling.STOP_ON_FAILURE)
 
 'รอจนกว่าการโหลดเสร็จสิ้น'
-WebUI.waitForElementNotPresent(findTestObject('Upload file without Labeling/div_loader'), 60, FailureHandling.STOP_ON_FAILURE)
+WebUI.waitForElementNotPresent(findTestObject('Upload file without Labeling/div_loader'), 100, FailureHandling.STOP_ON_FAILURE)
 
 'ตรวจสอบการแสดงข้อมูลที่ predict'
-WebUI.verifyElementPresent(findTestObject('Upload File with labelling/div_row'), 5, FailureHandling.CONTINUE_ON_FAILURE)
+WebUI.verifyElementPresent(findTestObject('Upload File with labelling/div_row'), 10, FailureHandling.STOP_ON_FAILURE)
 
 'ปิดเบราเซอร์'
 not_run: WebUI.closeBrowser(FailureHandling.STOP_ON_FAILURE)

@@ -102,10 +102,10 @@ WebUI.setText(findTestObject('Edit profile/input_lastname (2)'), '55555')
 WebUI.verifyElementNotClickable(findTestObject('Edit profile/button_SUBMIT (3)'), FailureHandling.CONTINUE_ON_FAILURE)
 
 'put text to firstname input'
-WebUI.setText(findTestObject('Edit profile//input_firstname (2)'), 'Piratchana')
+WebUI.setText(findTestObject('Edit profile//input_firstname (2)'), 'Do not change')
 
 'put text to lastname input'
-WebUI.setText(findTestObject('Edit profile/input_lastname (2)'), 'Maksub')
+WebUI.setText(findTestObject('Edit profile/input_lastname (2)'), 'Do not change')
 
 'empty for email'
 WebUI.setText(findTestObject('Edit profile/input_email (1)'), 'a')

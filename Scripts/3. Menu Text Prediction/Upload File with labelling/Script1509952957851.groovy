@@ -20,96 +20,63 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-'เปิดบราวเซอร์'
-not_run: WebUI.openBrowser('')
+'เปิดเบราเซอร์'
+not_run: WebUI.openBrowser('', FailureHandling.STOP_ON_FAILURE)
 
 'ขยายหน้าต่างเบราเซอร์'
 not_run: WebUI.maximizeWindow(FailureHandling.STOP_ON_FAILURE)
 
 'เข้าสู่ URL'
-not_run: WebUI.navigateToUrl('http://192.168.11.59/')
-
-'กดปุ่มเพื่อทำการ Login'
-not_run: WebUI.click(findTestObject('Upload File with labelling//span_Login (1)'))
-
-'กรอก Username'
-not_run: WebUI.setText(findTestObject('Upload File with labelling/input_ng-untouched ng-pristine'), 'piew')
-
-'กรอก Password'
-not_run: WebUI.setText(findTestObject('Upload File with labelling/input_ng-untouched ng-pristine (1)'), 'piew')
+not_run: WebUI.navigateToUrl('http://192.168.11.59/', FailureHandling.STOP_ON_FAILURE)
 
 'กดปุ่ม Login'
-not_run: WebUI.click(findTestObject('Upload File with labelling//button_Login (1)'))
+not_run: WebUI.click(findTestObject('Page_Guru TMDA (3)/span_Login'), FailureHandling.STOP_ON_FAILURE)
 
-'กดเลือกเมนู Text Prediction '
-WebUI.click(findTestObject('Upload File with labelling/a_Text Prediction'))
+'กรอก Username'
+not_run: WebUI.setText(findTestObject('Page_Guru TMDA (4)/input_ng-untouched ng-valid ng'), 'piew', FailureHandling.STOP_ON_FAILURE)
 
-'กดเลือกเมนู Upkoad File'
-WebUI.click(findTestObject('Upload File with labelling//a_Upload File (1)'))
+'กรอกรหัสผ่าน'
+not_run: WebUI.setText(findTestObject('Page_Guru TMDA (1)/input_ng-untouched ng-pristine'), 'piew', FailureHandling.STOP_ON_FAILURE)
+
+'กดปุ่ม Login'
+not_run: WebUI.click(findTestObject('Page_Guru TMDA (4)/button_Login'), FailureHandling.STOP_ON_FAILURE)
+
+'คลิกเมนู Text Prediction'
+WebUI.click(findTestObject('Page_Guru TMDA (3)/a_Text Prediction'), FailureHandling.STOP_ON_FAILURE)
+
+'เลือก Upload file'
+WebUI.click(findTestObject('Page_Guru TMDA (3)/a_Upload File'), FailureHandling.STOP_ON_FAILURE)
 
 'ตรวจสอบปุ่ม Upload ไม่สามารถกดได้'
-WebUI.verifyElementNotClickable(findTestObject('Upload File with labelling/button_Upload (1)'), FailureHandling.CONTINUE_ON_FAILURE)
+WebUI.verifyElementNotClickable(findTestObject('Page_Guru TMDA (5)/button_Upload'), FailureHandling.CONTINUE_ON_FAILURE)
 
-'ลองโหลดไฟล์ที่เป็นรูปภาพ'
-WebUI.uploadFile(findTestObject('Upload File with labelling//input_upfile'), 'C:\\Penguins.jpg')
-
-'รอให้ปุ่ม Upload สามารถกดได้'
-WebUI.waitForElementClickable(findTestObject('Upload File with labelling//button_Upload (1)'), 10, FailureHandling.CONTINUE_ON_FAILURE)
-
-'กดปุ่ม Upload'
-WebUI.click(findTestObject('Upload File with labelling//button_Upload (1)'))
-
-'รอให้แถบการดำเนินการหาย'
-WebUI.waitForElementClickable(findTestObject('Upload File with labelling/div_progress-bar-zone'), 10)
-
-'ตรวจสอบการแสดง pop up สีแดง และข้อความ File Not Type of Excel'
-WebUI.verifyElementPresent(findTestObject('Upload File with labelling/div_File Not Type of Excel'), 5)
-
-'กดปุ่มปิด pop up'
-WebUI.click(findTestObject('Upload File with labelling//button_'))
-
-'รอให้ pop up สีแดง และข้อความ File Not Type of Excel หายไป'
-WebUI.waitForElementNotPresent(findTestObject('Upload File with labelling/div_File Not Type of Excel'), 5)
-
-'ลองโหลดไฟล์ excel ที่ไม่ถูกรูปแบบ'
-WebUI.uploadFile(findTestObject('Upload File with labelling//input_upfile'), 'C:\\test-Copy1.xlsx')
+'เลือกไฟล์รูปภาพ'
+WebUI.uploadFile(findTestObject('Page_Guru TMDA (6)/Page_Guru TMDA (4)/input_upfile'), 'C:\\Penguins.jpg', FailureHandling.STOP_ON_FAILURE)
 
 'รอให้ปุ่ม Upload สามารถกดได้'
-WebUI.waitForElementClickable(findTestObject('Upload File with labelling//button_Upload (1)'), 10, FailureHandling.CONTINUE_ON_FAILURE)
+WebUI.waitForElementClickable(findTestObject('Page_Guru TMDA (5)/button_Upload'), 10, FailureHandling.CONTINUE_ON_FAILURE)
 
 'กดปุ่ม Upload'
-WebUI.click(findTestObject('Upload File with labelling//button_Upload (1)'))
+WebUI.click(findTestObject('Page_Guru TMDA (5)/button_Upload'), FailureHandling.STOP_ON_FAILURE)
 
 'รอให้แถบดำเนินการหายไป'
 WebUI.waitForElementNotPresent(findTestObject('Page_Guru TMDA (6)/Page_Guru TMDA (5)/Page_Guru TMDA/div_progress-bar-zone'), 
     5, FailureHandling.STOP_ON_FAILURE)
 
-'กดปุ่มปิดการแจ้งเตือนกรณี API ผิดพลาด'
-not_run: WebUI.click(findTestObject('Upload file without Labeling/Uploading/button_ (1)'), FailureHandling.OPTIONAL)
-
-'เลือกประเภท sheet'
-WebUI.selectOptionByIndex(findTestObject('Upload File with labelling/select_sheet'), '1', FailureHandling.STOP_ON_FAILURE)
-
-'รอให้การแจ้งเตือนปรากฎ'
-WebUI.waitForElementPresent(findTestObject('Upload File with labelling/div_w3-padding-32 w3-center'), 10, FailureHandling.CONTINUE_ON_FAILURE)
-
-'ตรวจสอบการแสดง pop up สีแดง และข้อความ File Not Type of Excel'
-WebUI.verifyElementPresent(findTestObject('Upload file without Labeling/Uploading/div_Your file is not verified.'), 5, FailureHandling.CONTINUE_ON_FAILURE)
+'ตรวจสอบการแจ้งเตือน File Not Type of Excel'
+WebUI.verifyElementPresent(findTestObject('Upload file without Labeling/Uploading/div_File Not Type of Excel'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
 'กดปุ่มปิดการแจ้งเตือน'
-WebUI.click(findTestObject('Upload File with labelling/button_your file is not verified'))
+WebUI.click(findTestObject('Upload file without Labeling/Uploading/button_ close Not type of excel'), FailureHandling.STOP_ON_FAILURE)
 
-'รอให้ pop up สีแดง และข้อความ File Not Type of Excel หายไป'
-WebUI.waitForElementNotPresent(findTestObject('Upload File with labelling/button_your file is not verified'), 5)
+'รอให้การแจ้งเตือนหายไป'
+WebUI.waitForElementNotPresent(findTestObject('Upload file without Labeling/Uploading//div_File Not Type of Excel'), 5)
 
-'ลองโหลดไฟล์ excel ที่ไม่ถูกรูปแบบ'
-WebUI.uploadFile(findTestObject('Upload File with labelling/input_upfile'), 'C:\\test1.xlsx')
-
-'รอให้ปุ่ม Upload สามารถกดได้'
-WebUI.waitForElementClickable(findTestObject('Upload File with labelling//button_Upload (1)'), 10, FailureHandling.CONTINUE_ON_FAILURE)
+'เลือกไฟล์ Excel'
+WebUI.uploadFile(findTestObject('Page_Guru TMDA (6)/Page_Guru TMDA (4)/input_upfile'), 'C:\\test-Copy1.xlsx', FailureHandling.STOP_ON_FAILURE)
 
 'กดปุ่ม Upload'
-WebUI.click(findTestObject('Upload File with labelling//button_Upload (1)'))
+WebUI.click(findTestObject('Page_Guru TMDA (5)/button_Upload'), FailureHandling.STOP_ON_FAILURE)
 
 'รอให้แถบดำเนินการหายไป'
 WebUI.waitForElementNotPresent(findTestObject('Page_Guru TMDA (6)/Page_Guru TMDA (5)/Page_Guru TMDA/div_progress-bar-zone'), 
@@ -118,136 +85,27 @@ WebUI.waitForElementNotPresent(findTestObject('Page_Guru TMDA (6)/Page_Guru TMDA
 'กดปุ่มปิดการแจ้งเตือนกรณี API ผิดพลาด'
 not_run: WebUI.click(findTestObject('Upload file without Labeling/Uploading/button_ (1)'), FailureHandling.OPTIONAL)
 
-'เลือกประเภท sheet'
-WebUI.selectOptionByIndex(findTestObject('Upload File with labelling/select_sheet (2)'), '1', FailureHandling.STOP_ON_FAILURE)
+'เลือกประเภท Sheet'
+WebUI.selectOptionByIndex(findTestObject('Page_Guru TMDA (5)/select_sheet'), '1')
 
 'รอให้การแจ้งเตือนปรากฎ'
-WebUI.waitForElementPresent(findTestObject('Upload File with labelling/div_w3-padding-32 w3-center'), 10, FailureHandling.CONTINUE_ON_FAILURE)
+WebUI.waitForElementPresent(findTestObject('Page_Guru TMDA (6)/Page_Guru TMDA (1)/div_w3-padding-32 w3-center'), 10, FailureHandling.CONTINUE_ON_FAILURE)
 
 'ตรวจสอบการแจ้งเตือน Your file is not verified'
 WebUI.verifyElementPresent(findTestObject('Upload file without Labeling/Uploading/div_Your file is not verified.'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
 'กดปุ่มปิดการแจ้งเตือน'
-WebUI.click(findTestObject('Upload File with labelling/button_your file is not verified'))
+WebUI.click(findTestObject('Upload file without Labeling/Uploading/button_ closeing Your file is not verified'))
 
 'รอให้การแจ้งเตือนหายไป'
-WebUI.waitForElementNotPresent(findTestObject('Upload File with labelling/button_your file is not verified'), 5)
+WebUI.waitForElementNotPresent(findTestObject('Upload file without Labeling/Uploading/div_Your file is not verified.'), 
+    5)
 
-'โหลดไฟล์ Label'
-WebUI.uploadFile(findTestObject('Upload File with labelling/input_upfile'), 'C:\\test.xlsx')
-
-'รอให้ปุ่ม Upload สามารถกดได้'
-WebUI.waitForElementClickable(findTestObject('Upload File with labelling//button_Upload (1)'), 10, FailureHandling.CONTINUE_ON_FAILURE)
+'เลือกไฟล์ Excel'
+WebUI.uploadFile(findTestObject('Page_Guru TMDA (6)/Page_Guru TMDA (4)/input_upfile'), 'C:\\test1.xlsx', FailureHandling.STOP_ON_FAILURE)
 
 'กดปุ่ม Upload'
-WebUI.click(findTestObject('Upload File with labelling//button_Upload (1)'))
-
-'รอให้แถบดำเนินการหายไป'
-WebUI.waitForElementNotPresent(findTestObject('Page_Guru TMDA (6)/Page_Guru TMDA (5)/Page_Guru TMDA/div_progress-bar-zone'), 
-    5, FailureHandling.CONTINUE_ON_FAILURE)
-
-'เลือกประเภท sheet'
-WebUI.selectOptionByIndex(findTestObject('Upload File with labelling/select_sheet'), '1', FailureHandling.STOP_ON_FAILURE)
-
-'รอให้การแจ้งเตือนปรากฎขึ้นมา'
-WebUI.waitForElementPresent(findTestObject('Upload File with labelling/div_w3-padding-32 w3-center'), 10, FailureHandling.CONTINUE_ON_FAILURE)
-
-'ตรวจสอบการแจ้งเตือน Your file is verified'
-WebUI.verifyElementPresent(findTestObject('Upload File with labelling//div_Your file is verified.'), 5, FailureHandling.CONTINUE_ON_FAILURE)
-
-'กดปิดการแจ้งเตือน'
-WebUI.click(findTestObject('Upload File with labelling/button_your file is verified'))
-
-'รอให้การแจ้งเตือนหายไป'
-WebUI.waitForElementNotPresent(findTestObject('Upload File with labelling//div_w3-padding-32 w3-center'), 5, FailureHandling.CONTINUE_ON_FAILURE)
-
-'รอให้สัญลักษณ์เครื่องหมายถูกต้องสีเขียวแสดง'
-WebUI.waitForElementPresent(findTestObject('Upload File with labelling/i_fa fa-check w3-text-green'), 10, FailureHandling.CONTINUE_ON_FAILURE)
-
-'กดปุ่ม Preview'
-WebUI.click(findTestObject('Upload File with labelling//button_Preview (1)'))
-
-'ตรวจสอบการแสดงผลหลังจากกดปุ่ม preview'
-WebUI.verifyElementPresent(findTestObject('Upload File with labelling/div_excel-reader'), 5, FailureHandling.CONTINUE_ON_FAILURE)
-
-'ปิดหน้า preview'
-WebUI.click(findTestObject('Upload File with labelling/i_fa fa-times w3-xlarge w3-tex'))
-
-'เลื่อนหน้าต่างมายังปุ่ม Start'
-WebUI.scrollToElement(findTestObject('Upload File with labelling//button_Start (1)'), 2, FailureHandling.STOP_ON_FAILURE)
-
-'กดปุ่ม start'
-WebUI.click(findTestObject('Upload File with labelling//button_Start (1)'))
-
-'รอให้แถบดำเนินการหายไป'
-WebUI.waitForElementNotPresent(findTestObject('Page_Guru TMDA (6)/Page_Guru TMDA (5)/Page_Guru TMDA/div_progress-bar-zone'), 
-    5, FailureHandling.STOP_ON_FAILURE)
-
-'รอจนกว่าจะโหลดเสร็จ'
-WebUI.waitForElementNotPresent(findTestObject('Upload File with labelling//div_loader'), 20, FailureHandling.CONTINUE_ON_FAILURE)
-
-'ตรวจสอบการแสดงข้อมูลที่ predict'
-WebUI.verifyElementPresent(findTestObject('Upload File with labelling/div_row'), 5, FailureHandling.CONTINUE_ON_FAILURE)
-
-'ปิดบราวเซอร์'
-not_run: WebUI.closeBrowser()
-
-'ขยายหน้าต่างเบราเซอร์'
-WebUI.maximizeWindow(FailureHandling.STOP_ON_FAILURE)
-
-'เข้าสู่ URL'
-WebUI.navigateToUrl('http://192.168.11.59/')
-
-'กดปุ่มเพื่อทำการ Login'
-WebUI.click(findTestObject('Upload File with labelling//span_Login (1)'))
-
-'กรอก Username'
-WebUI.setText(findTestObject('Upload File with labelling/input_ng-untouched ng-pristine'), 'piew')
-
-'กรอก Password'
-WebUI.setText(findTestObject('Upload File with labelling/input_ng-untouched ng-pristine (1)'), 'piew')
-
-'กดปุ่ม Login'
-WebUI.click(findTestObject('Upload File with labelling//button_Login (1)'))
-
-'กดเลือกเมนู Text Prediction '
-WebUI.click(findTestObject('Upload File with labelling/a_Text Prediction'))
-
-'กดเลือกเมนู Upkoad File'
-WebUI.click(findTestObject('Upload File with labelling//a_Upload File (1)'))
-
-'ตรวจสอบปุ่ม Upload ไม่สามารถกดได้'
-WebUI.verifyElementNotClickable(findTestObject('Upload File with labelling/button_Upload (1)'), FailureHandling.CONTINUE_ON_FAILURE)
-
-'ลองโหลดไฟล์ที่เป็นรูปภาพ'
-WebUI.uploadFile(findTestObject('Upload File with labelling//input_upfile'), 'D:\\Penguins.jpg')
-
-'รอให้ปุ่ม Upload สามารถกดได้'
-WebUI.waitForElementClickable(findTestObject('Upload File with labelling//button_Upload (1)'), 10, FailureHandling.CONTINUE_ON_FAILURE)
-
-'กดปุ่ม Upload'
-WebUI.click(findTestObject('Upload File with labelling//button_Upload (1)'))
-
-'รอให้แถบการดำเนินการหาย'
-WebUI.waitForElementClickable(findTestObject('Upload File with labelling/div_progress-bar-zone'), 10)
-
-'ตรวจสอบการแสดง pop up สีแดง และข้อความ File Not Type of Excel'
-WebUI.verifyElementPresent(findTestObject('Upload File with labelling/div_File Not Type of Excel'), 5)
-
-'กดปุ่มปิด pop up'
-WebUI.click(findTestObject('Upload File with labelling//button_'))
-
-'รอให้ pop up สีแดง และข้อความ File Not Type of Excel หายไป'
-WebUI.waitForElementNotPresent(findTestObject('Upload File with labelling/div_File Not Type of Excel'), 5)
-
-'ลองโหลดไฟล์ excel ที่ไม่ถูกรูปแบบ'
-WebUI.uploadFile(findTestObject('Upload File with labelling//input_upfile'), 'D:\\test-Copy1.xlsx')
-
-'รอให้ปุ่ม Upload สามารถกดได้'
-WebUI.waitForElementClickable(findTestObject('Upload File with labelling//button_Upload (1)'), 10, FailureHandling.CONTINUE_ON_FAILURE)
-
-'กดปุ่ม Upload'
-WebUI.click(findTestObject('Upload File with labelling//button_Upload (1)'))
+WebUI.click(findTestObject('Page_Guru TMDA (5)/button_Upload'), FailureHandling.STOP_ON_FAILURE)
 
 'รอให้แถบดำเนินการหายไป'
 WebUI.waitForElementNotPresent(findTestObject('Page_Guru TMDA (6)/Page_Guru TMDA (5)/Page_Guru TMDA/div_progress-bar-zone'), 
@@ -256,104 +114,75 @@ WebUI.waitForElementNotPresent(findTestObject('Page_Guru TMDA (6)/Page_Guru TMDA
 'กดปุ่มปิดการแจ้งเตือนกรณี API ผิดพลาด'
 not_run: WebUI.click(findTestObject('Upload file without Labeling/Uploading/button_ (1)'), FailureHandling.OPTIONAL)
 
-'เลือกประเภท sheet'
-WebUI.selectOptionByIndex(findTestObject('Upload File with labelling/select_sheet'), '1', FailureHandling.STOP_ON_FAILURE)
+'เลือกประเภท Sheet'
+WebUI.selectOptionByIndex(findTestObject('Page_Guru TMDA (5)/select_sheet'), '1')
 
 'รอให้การแจ้งเตือนปรากฎ'
-WebUI.waitForElementPresent(findTestObject('Upload File with labelling/div_w3-padding-32 w3-center'), 10, FailureHandling.CONTINUE_ON_FAILURE)
-
-'ตรวจสอบการแสดง pop up สีแดง และข้อความ File Not Type of Excel'
-WebUI.verifyElementPresent(findTestObject('Upload file without Labeling/Uploading/div_Your file is not verified.'), 5, FailureHandling.CONTINUE_ON_FAILURE)
-
-'กดปุ่มปิดการแจ้งเตือน'
-WebUI.click(findTestObject('Upload File with labelling/button_your file is not verified'))
-
-'รอให้ pop up สีแดง และข้อความ File Not Type of Excel หายไป'
-WebUI.waitForElementNotPresent(findTestObject('Upload File with labelling/button_your file is not verified'), 5)
-
-'ลองโหลดไฟล์ excel ที่ไม่ถูกรูปแบบ'
-WebUI.uploadFile(findTestObject('Upload File with labelling/input_upfile'), 'D:\\test1.xlsx')
-
-'รอให้ปุ่ม Upload สามารถกดได้'
-WebUI.waitForElementClickable(findTestObject('Upload File with labelling//button_Upload (1)'), 10, FailureHandling.CONTINUE_ON_FAILURE)
-
-'กดปุ่ม Upload'
-WebUI.click(findTestObject('Upload File with labelling//button_Upload (1)'))
-
-'รอให้แถบดำเนินการหายไป'
-WebUI.waitForElementNotPresent(findTestObject('Page_Guru TMDA (6)/Page_Guru TMDA (5)/Page_Guru TMDA/div_progress-bar-zone'), 
-    5, FailureHandling.STOP_ON_FAILURE)
-
-'กดปุ่มปิดการแจ้งเตือนกรณี API ผิดพลาด'
-not_run: WebUI.click(findTestObject('Upload file without Labeling/Uploading/button_ (1)'), FailureHandling.OPTIONAL)
-
-'เลือกประเภท sheet'
-WebUI.selectOptionByIndex(findTestObject('Upload File with labelling/select_sheet (2)'), '1', FailureHandling.STOP_ON_FAILURE)
-
-'รอให้การแจ้งเตือนปรากฎ'
-WebUI.waitForElementPresent(findTestObject('Upload File with labelling/div_w3-padding-32 w3-center'), 10, FailureHandling.CONTINUE_ON_FAILURE)
+WebUI.waitForElementPresent(findTestObject('Page_Guru TMDA (6)/Page_Guru TMDA (1)/div_w3-padding-32 w3-center'), 10, FailureHandling.CONTINUE_ON_FAILURE)
 
 'ตรวจสอบการแจ้งเตือน Your file is not verified'
 WebUI.verifyElementPresent(findTestObject('Upload file without Labeling/Uploading/div_Your file is not verified.'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
 'กดปุ่มปิดการแจ้งเตือน'
-WebUI.click(findTestObject('Upload File with labelling/button_your file is not verified'))
+WebUI.click(findTestObject('Upload file without Labeling/Uploading/button_ closeing Your file is not verified'))
 
 'รอให้การแจ้งเตือนหายไป'
-WebUI.waitForElementNotPresent(findTestObject('Upload File with labelling/button_your file is not verified'), 5)
+WebUI.waitForElementNotPresent(findTestObject('Upload file without Labeling/Uploading/div_Your file is not verified.'), 
+    5)
 
-'โหลดไฟล์ Label'
-WebUI.uploadFile(findTestObject('Upload File with labelling/input_upfile'), 'D:\\test.xlsx')
-
-'รอให้ปุ่ม Upload สามารถกดได้'
-WebUI.waitForElementClickable(findTestObject('Upload File with labelling//button_Upload (1)'), 10, FailureHandling.CONTINUE_ON_FAILURE)
+'เลือกไฟล์ Excel'
+WebUI.uploadFile(findTestObject('Page_Guru TMDA (6)/Page_Guru TMDA (4)/input_upfile'), 'C:\\test.xlsx', FailureHandling.STOP_ON_FAILURE)
 
 'กดปุ่ม Upload'
-WebUI.click(findTestObject('Upload File with labelling//button_Upload (1)'))
+WebUI.click(findTestObject('Page_Guru TMDA (5)/button_Upload'), FailureHandling.STOP_ON_FAILURE)
 
 'รอให้แถบดำเนินการหายไป'
 WebUI.waitForElementNotPresent(findTestObject('Page_Guru TMDA (6)/Page_Guru TMDA (5)/Page_Guru TMDA/div_progress-bar-zone'), 
-    5, FailureHandling.CONTINUE_ON_FAILURE)
+    5, FailureHandling.STOP_ON_FAILURE)
 
-'เลือกประเภท sheet'
-WebUI.selectOptionByIndex(findTestObject('Upload File with labelling/select_sheet'), '1', FailureHandling.STOP_ON_FAILURE)
+'กดปุ่มปิดการแจ้งเตือนกรณี API ผิดพลาด'
+not_run: WebUI.click(findTestObject('Upload file without Labeling/Uploading/button_ (1)'), FailureHandling.OPTIONAL)
+
+'เลือกประเภท Sheet'
+WebUI.selectOptionByIndex(findTestObject('Page_Guru TMDA (5)/select_sheet'), '1')
 
 'รอให้การแจ้งเตือนปรากฎขึ้นมา'
-WebUI.waitForElementPresent(findTestObject('Upload File with labelling/div_w3-padding-32 w3-center'), 10, FailureHandling.CONTINUE_ON_FAILURE)
+WebUI.waitForElementPresent(findTestObject('Page_Guru TMDA (6)/Page_Guru TMDA (1)/div_w3-padding-32 w3-center'), 10, FailureHandling.STOP_ON_FAILURE)
 
 'ตรวจสอบการแจ้งเตือน Your file is verified'
-WebUI.verifyElementPresent(findTestObject('Upload File with labelling//div_Your file is verified.'), 5, FailureHandling.CONTINUE_ON_FAILURE)
+WebUI.verifyElementPresent(findTestObject('Upload file without Labeling/Uploading/div_Your file is verified.'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
-'กดปิดการแจ้งเตือน'
-WebUI.click(findTestObject('Upload File with labelling/button_your file is verified'))
+'กดปุ่มปิดการแจ้งเตือน'
+WebUI.click(findTestObject('Page_Guru TMDA (6)/Page_Guru TMDA (3)/button_'), FailureHandling.STOP_ON_FAILURE)
 
 'รอให้การแจ้งเตือนหายไป'
-WebUI.waitForElementNotPresent(findTestObject('Upload File with labelling//div_w3-padding-32 w3-center'), 5, FailureHandling.CONTINUE_ON_FAILURE)
+WebUI.waitForElementNotPresent(findTestObject('Page_Guru TMDA (6)/Page_Guru TMDA (1)/div_w3-padding-32 w3-center'), 5, FailureHandling.STOP_ON_FAILURE)
 
-'รอให้สัญลักษณ์เครื่องหมายถูกต้องสีเขียวแสดง'
-WebUI.waitForElementPresent(findTestObject('Upload File with labelling/i_fa fa-check w3-text-green'), 10, FailureHandling.CONTINUE_ON_FAILURE)
+'มีสัญลักษณ์เครื่องหมายถูกต้องสีเขียว'
+WebUI.waitForElementPresent(findTestObject('Page_Guru TMDA (6)/Page_Guru TMDA (2)/i_fa fa-check w3-text-green'), 10, FailureHandling.STOP_ON_FAILURE)
 
 'กดปุ่ม Preview'
-WebUI.click(findTestObject('Upload File with labelling//button_Preview (1)'))
+WebUI.click(findTestObject('Upload file without Labeling/Uploading//button_Preview'))
 
-'ตรวจสอบการแสดงผลหลังจากกดปุ่ม preview'
-WebUI.verifyElementPresent(findTestObject('Upload File with labelling/div_excel-reader'), 5, FailureHandling.CONTINUE_ON_FAILURE)
+'ตรวจสอบหน้าต่าง Preview'
+WebUI.verifyElementPresent(findTestObject('Upload file without Labeling/Uploading//div_excel-reader'), 5)
 
-'ปิดหน้า preview'
-WebUI.click(findTestObject('Upload File with labelling/i_fa fa-times w3-xlarge w3-tex'))
+'ปิดหน้าต่าง Preview'
+WebUI.click(findTestObject('Upload file without Labeling/Uploading/div_close'))
 
-'เลื่อนหน้าต่างมายังปุ่ม Start'
-WebUI.scrollToElement(findTestObject('Upload File with labelling//button_Start (1)'), 2, FailureHandling.STOP_ON_FAILURE)
+'เลือกหน้าต่างมายังปุ่ม Start'
+WebUI.scrollToElement(findTestObject('Page_Guru TMDA (16)/button_Start'), 2, FailureHandling.STOP_ON_FAILURE)
 
-'กดปุ่ม start'
-WebUI.click(findTestObject('Upload File with labelling//button_Start (1)'))
+'กดปุ่ม Start'
+WebUI.click(findTestObject('Page_Guru TMDA (5)/button_Start'), FailureHandling.STOP_ON_FAILURE)
 
-'รอจนกว่าจะโหลดเสร็จ'
-WebUI.waitForElementNotPresent(findTestObject('Upload File with labelling//div_loader'), 20, FailureHandling.CONTINUE_ON_FAILURE)
+'รอให้แถบดำเนินการหายไป'
+WebUI.waitForElementNotPresent(findTestObject('Page_Guru TMDA (6)/Page_Guru TMDA (5)/Page_Guru TMDA/div_progress-bar-zone'), 
+    5, FailureHandling.STOP_ON_FAILURE)
 
-'ตรวจสอบการแสดงข้อมูลที่ predict'
-WebUI.verifyElementPresent(findTestObject('Upload File with labelling/div_row'), 5, FailureHandling.CONTINUE_ON_FAILURE)
+'รอจนกว่าการโหลดเสร็จสิ้น'
+WebUI.waitForElementNotPresent(findTestObject('Upload file without Labeling/div_loader'), 100, FailureHandling.STOP_ON_FAILURE)
 
-'ปิดบราวเซอร์'
-not_run: WebUI.closeBrowser()
+'ปิดเบราเซอร์'
+not_run: WebUI.closeBrowser(FailureHandling.STOP_ON_FAILURE)
 
