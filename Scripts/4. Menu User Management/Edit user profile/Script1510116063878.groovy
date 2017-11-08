@@ -51,7 +51,7 @@ not_run: WebUI.setText(findTestObject('Page_Guru TMDA (1)/input_ng-untouched ng-
 not_run: WebUI.submit(findTestObject('Page_Guru TMDA (1)/button_Login'), FailureHandling.CONTINUE_ON_FAILURE)
 
 'click profile picture'
-WebUI.click(findTestObject('Edit profile/img (1)'))
+WebUI.click(findTestObject('reset password/img_Profile (1)'))
 
 'click "Edit Profile"'
 WebUI.click(findTestObject('Edit profile//span_Edit Profile'))
