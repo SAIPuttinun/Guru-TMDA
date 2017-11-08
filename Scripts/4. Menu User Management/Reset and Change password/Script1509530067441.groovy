@@ -54,7 +54,7 @@ WebUI.click(findTestObject('reset password//i_fa fa-pencil-square-o (1)'))
 WebUI.click(findTestObject('reset password//a_Reset Password (1)'))
 
 'กดปุ่ม Yes'
-WebUI.click(findTestObject('reset password//button_Yes (1)'))
+WebUI.click(findTestObject('reset password/button_Yes'))
 
 'รอให้หน้าต่างคอนเฟิมปิดไป'
 WebUI.waitForElementNotPresent(findTestObject('reset password/img_w3-center'), 5)
@@ -66,63 +66,63 @@ WebUI.click(findTestObject('reset password//img_Profile (1)'))
 WebUI.click(findTestObject('reset password//button_LOGOUT (1)'))
 
 'Login'
-WebUI.click(findTestObject('Page_Guru TMDA/span_Login'))
+WebUI.click(findTestObject('Page_Guru TMDA/span_Login'), FailureHandling.CONTINUE_ON_FAILURE)
 
 'Login'
-WebUI.setText(findTestObject('Page_Guru TMDA (1)/input_ng-untouched ng-valid ng'), 'Creme')
+WebUI.setText(findTestObject('Page_Guru TMDA (1)/input_ng-untouched ng-valid ng'), 'Creme', FailureHandling.CONTINUE_ON_FAILURE)
 
 'Login'
-WebUI.setText(findTestObject('Page_Guru TMDA (1)/input_ng-untouched ng-pristine'), 'Creme')
+WebUI.setText(findTestObject('Page_Guru TMDA (1)/input_ng-untouched ng-pristine'), 'Creme', FailureHandling.CONTINUE_ON_FAILURE)
 
 'Login'
-WebUI.submit(findTestObject('Page_Guru TMDA (1)/button_Login'))
+WebUI.submit(findTestObject('Page_Guru TMDA (1)/button_Login'), FailureHandling.CONTINUE_ON_FAILURE)
 
 'ตรวจสอบเมนูปรากฎหลังเข้าสู่ระบบเสร็จสิ้น'
-WebUI.verifyElementPresent(findTestObject('reset password//a_Help (1)'), 5)
+WebUI.verifyElementPresent(findTestObject('reset password//a_Help (1)'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
 'กดรุปโปรไฟล์มุมด้านบนขวา'
-WebUI.click(findTestObject('reset password/img_Profile (1)'))
+WebUI.click(findTestObject('reset password/img_Profile (1)'), FailureHandling.CONTINUE_ON_FAILURE)
 
 'กดลิ้ง Edit profile'
-WebUI.click(findTestObject('reset password//span_Edit Profile (1)'))
+WebUI.click(findTestObject('reset password//span_Edit Profile (1)'), FailureHandling.CONTINUE_ON_FAILURE)
 
 'กรอกรหัสผ่านเดิม'
-WebUI.setText(findTestObject('reset password//input_old_password (1)'), 'Creme')
+WebUI.setText(findTestObject('reset password//input_old_password (1)'), 'Creme', FailureHandling.CONTINUE_ON_FAILURE)
 
 'กรอกรหัสผ่านใหม่'
-WebUI.setText(findTestObject('reset password//input_new_password (1)'), '1234')
+WebUI.setText(findTestObject('reset password//input_new_password (1)'), '1234', FailureHandling.CONTINUE_ON_FAILURE)
 
 'กรอกยืนยันรหัสผ่าน'
-WebUI.setText(findTestObject('reset password//input_cf_password (1)'), '123')
+WebUI.setText(findTestObject('reset password//input_cf_password (1)'), '123', FailureHandling.CONTINUE_ON_FAILURE)
 
 'กดปุ่ม Submit'
-WebUI.click(findTestObject('reset password//button_SUBMIT (1)'))
+WebUI.click(findTestObject('reset password//button_SUBMIT (1)'), FailureHandling.CONTINUE_ON_FAILURE)
 
 'ยืนยันการแจ้งเตือน Password is Not Equal'
-WebUI.verifyElementPresent(findTestObject('reset password/div_Confirm Password is Not Eq'), 5)
+WebUI.verifyElementPresent(findTestObject('reset password/div_Confirm Password is Not Eq'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
 'ปิดหน้าต่างแจ้งเตือน'
-WebUI.click(findTestObject('reset password/button_ Close alert'))
+WebUI.click(findTestObject('reset password/button_ Close alert'), FailureHandling.CONTINUE_ON_FAILURE)
 
-WebUI.waitForElementNotPresent(findTestObject('reset password//div_Confirm Password is Not Eq'), 5)
+WebUI.waitForElementNotPresent(findTestObject('reset password//div_Confirm Password is Not Eq'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
 'กรอกยืนยันรหัสผ่าน'
-WebUI.setText(findTestObject('reset password//input_cf_password (1)'), '1234')
+WebUI.setText(findTestObject('reset password//input_cf_password (1)'), '1234', FailureHandling.CONTINUE_ON_FAILURE)
 
 'กดปุ่ม Submit'
-WebUI.click(findTestObject('reset password//button_SUBMIT (1)'))
+WebUI.click(findTestObject('reset password//button_SUBMIT (1)'), FailureHandling.CONTINUE_ON_FAILURE)
 
 'ยืนยันการแจ้งเตือน Edit Profile Successful'
-WebUI.verifyElementPresent(findTestObject('reset password//div_Edit Profile Successful. (1)'), 5)
+WebUI.verifyElementPresent(findTestObject('reset password//div_Edit Profile Successful. (1)'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
 'ปิดหน้าต่างแจ้งเตือน'
-WebUI.click(findTestObject('reset password//button_ Closing Edit successful (1)'))
+WebUI.click(findTestObject('reset password//button_ Closing Edit successful (1)'), FailureHandling.CONTINUE_ON_FAILURE)
 
 'กดรุปโปรไฟล์มุมด้านบนขวา'
-WebUI.click(findTestObject('reset password//img_Profile (1)'))
+WebUI.click(findTestObject('reset password//img_Profile (1)'), FailureHandling.CONTINUE_ON_FAILURE)
 
 'กดปุ่ม Logout'
-WebUI.click(findTestObject('reset password//button_LOGOUT (1)'))
+WebUI.click(findTestObject('reset password//button_LOGOUT (1)'), FailureHandling.CONTINUE_ON_FAILURE)
 
 'Login'
 WebUI.click(findTestObject('Page_Guru TMDA/span_Login'))
@@ -135,9 +135,6 @@ WebUI.setText(findTestObject('Page_Guru TMDA (1)/input_ng-untouched ng-pristine'
 
 'Login'
 WebUI.submit(findTestObject('Page_Guru TMDA (1)/button_Login'))
-
-'ตรวจสอบเมนูปรากฎหลังเข้าสู่ระบบเสร็จสิ้น'
-WebUI.verifyElementPresent(findTestObject('reset password//a_Help (1)'), 5)
 
 not_run: WebUI.closeBrowser()
 
