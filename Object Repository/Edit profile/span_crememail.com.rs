@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>span_crememail.com</name>
+   <tag></tag>
+   <elementGuidId>5fc196c9-bccd-4a3f-af31-c5c8c54d68da</elementGuidId>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>span</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>w3-text-gray</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>creme@mail.com</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>/html[1]/body[1]/my-app[1]/app-edit-profile[1]/div[@class=&quot;container-fluid centurygothic-font&quot;]/form[@class=&quot;ng-touched ng-dirty ng-valid&quot;]/div[@class=&quot;row w3-margin-top&quot;]/div[@class=&quot;col-xs-12 col-sm-6 col-sm-offset-3&quot;]/div[@class=&quot;w3-card w3-margin-top w3-margin-bottom&quot;]/div[@class=&quot;w3-container&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;col-xs-9 w3-padding-16 formuser&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;col-xs-9 w3-padding-large&quot;]/div[1]/span[@class=&quot;w3-text-gray&quot;]</value>
+   </webElementProperties>
+</WebElementEntity>
