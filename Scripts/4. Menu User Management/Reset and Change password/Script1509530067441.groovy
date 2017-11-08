@@ -93,6 +93,20 @@ WebUI.setText(findTestObject('reset password//input_old_password (1)'), 'Creme')
 WebUI.setText(findTestObject('reset password//input_new_password (1)'), '1234')
 
 'กรอกยืนยันรหัสผ่าน'
+WebUI.setText(findTestObject('reset password//input_cf_password (1)'), '123')
+
+'กดปุ่ม Submit'
+WebUI.click(findTestObject('reset password//button_SUBMIT (1)'))
+
+'ยืนยันการแจ้งเตือน Password is Not Equal'
+WebUI.verifyElementPresent(findTestObject('reset password/div_Confirm Password is Not Eq'), 5)
+
+'ปิดหน้าต่างแจ้งเตือน'
+WebUI.click(findTestObject('reset password/button_ Close alert'))
+
+WebUI.waitForElementNotPresent(findTestObject('reset password//div_Confirm Password is Not Eq'), 5)
+
+'กรอกยืนยันรหัสผ่าน'
 WebUI.setText(findTestObject('reset password//input_cf_password (1)'), '1234')
 
 'กดปุ่ม Submit'

@@ -19,6 +19,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKe
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+
 'เก็บเวลาปัจุบันของเครื่อง'
 Date date = new Date()
 
@@ -27,6 +28,7 @@ java.text.SimpleDateFormat df = new java.text.SimpleDateFormat()
 
 'เก็บเวลาปัจุบันของเครื่อง'
 df.applyPattern('ddmmyyyyHHmmss')
+
 'เ�?ิดเ�?ราเ�?อร�?'
 WebUI.openBrowser('', FailureHandling.CONTINUE_ON_FAILURE)
 
@@ -56,6 +58,10 @@ WebUI.setText(findTestObject('Change role/Page_Guru TMDA (2)/input_ng-untouched 
 
 '�?ด�?ุ�?ม�?�?�?�?�? Profile'
 WebUI.click(findTestObject('Edit user profile/list/i_fa fa-pencil-square-o'))
+
+WebUI.click(findTestObject('Edit user profile/Edit/button_SUBMIT'), FailureHandling.STOP_ON_FAILURE)
+
+WebUI.verifyElementNotPresent(findTestObject('Edit user profile/Edit/div_Edit Profile Successful.'), 5)
 
 '�?ดสั�?ลั�?ษณ�?ดิ�?สอหลั�?�?ื�?อ'
 WebUI.click(findTestObject('Edit user profile/Edit//i_fa fa-pencil name'))
@@ -115,7 +121,7 @@ WebUI.setText(findTestObject('Edit user profile/Edit/input_email'), 'Cremecreme'
 WebUI.verifyElementNotClickable(findTestObject('Edit user profile/Edit/button_SUBMIT'))
 
 '�?รอ�?อีเมลที�?ถู�?รู�?�?�?�?'
-WebUI.setText(findTestObject('Edit user profile/Edit/input_email'), df.format(date)+'@mail.com')
+WebUI.setText(findTestObject('Edit user profile/Edit/input_email'), df.format(date) + '@mail.com')
 
 '�?ด�?ุ�?ม Submit'
 WebUI.click(findTestObject('Edit user profile/Edit/button_SUBMIT'))
