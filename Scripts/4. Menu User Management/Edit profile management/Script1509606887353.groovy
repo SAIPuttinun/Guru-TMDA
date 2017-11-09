@@ -29,13 +29,10 @@ java.text.SimpleDateFormat df = new java.text.SimpleDateFormat()
 'เก็บเวลาปัจุบันของเครื่อง'
 df.applyPattern('ddmmyyyyHHmmss')
 
-'เ�?ิดเ�?ราเ�?อร�?'
 not_run: WebUI.openBrowser('', FailureHandling.CONTINUE_ON_FAILURE)
 
-'�?ยายห�?�?าต�?า�? เ�?ราเ�?อร�?'
 not_run: WebUI.maximizeWindow(FailureHandling.CONTINUE_ON_FAILURE)
 
-'เ�?�?าสู�? URL'
 not_run: WebUI.navigateToUrl('192.168.11.59', FailureHandling.CONTINUE_ON_FAILURE)
 
 'login'
@@ -50,90 +47,92 @@ not_run: WebUI.setText(findTestObject('Page_Guru TMDA (1)/input_ng-untouched ng-
 'login'
 not_run: WebUI.submit(findTestObject('Page_Guru TMDA (1)/button_Login'), FailureHandling.CONTINUE_ON_FAILURE)
 
-'�?ลิ�?เม�?ู User Management'
+'Click menu User Management'
 WebUI.click(findTestObject('Change role/Page_Guru TMDA/a_User Management'))
 
-'�?รอ�?�?�?อ�?วามล�?�?�?�?�?อ�?�?�?�?หา'
+'Fill in the search box.'
 WebUI.setText(findTestObject('Change role/Page_Guru TMDA (2)/input_ng-untouched ng-valid ng'), 'fortest')
 
-'�?ด�?ุ�?ม�?�?�?�?�? Profile'
+'Click edit Profile button'
 WebUI.click(findTestObject('Edit user profile/list/i_fa fa-pencil-square-o'))
 
+'Click Submit button'
 WebUI.click(findTestObject('Edit user profile/Edit/button_SUBMIT'), FailureHandling.STOP_ON_FAILURE)
 
+'Verify Edit Profile Successful text'
 WebUI.verifyElementNotPresent(findTestObject('Edit user profile/Edit/div_Edit Profile Successful.'), 5)
 
+'Choose a picture in drive C'
 WebUI.uploadFile(findTestObject('Change profile pic/input_file-input (1)'), 'C:\\Penguins.jpg')
 
-'�?ดสั�?ลั�?ษณ�?ดิ�?สอหลั�?�?ื�?อ'
+'Click edit name button'
 WebUI.click(findTestObject('Edit user profile/Edit//i_fa fa-pencil name'))
 
-'�?ดสั�?ลั�?ษณ�?ดิ�?สอหลั�?อีเมล'
+'Clic edit email button'
 WebUI.click(findTestObject('Edit user profile/Edit/i_fa fa-pencil email'))
 
-'ล�?�?�?อ�?วาม�?�?�?ล�?อ�?�?�?อ�?วาม First name'
+'Delete First name'
 WebUI.setText(findTestObject('Edit user profile/Edit//input_firstname'), 'e')
 
-'ล�?�?�?อ�?วาม�?�?�?ล�?อ�?�?�?อ�?วาม First name'
+'Delete First name'
 WebUI.sendKeys(findTestObject('Edit user profile/Edit//input_firstname'), Keys.chord(Keys.BACK_SPACE), FailureHandling.STOP_ON_FAILURE)
 
-'ตรว�?สอ�?�?ุ�?ม Submit �?ม�?สามารถ�?ด�?ด�?'
+'Click submit button'
 WebUI.verifyElementNotClickable(findTestObject('Edit user profile/Edit/button_SUBMIT'))
 
-'�?รอ�?�?ื�?อเ�?�?�?ตัวเล�?'
+'Fill firstname by number'
 WebUI.setText(findTestObject('Edit user profile/Edit//input_firstname'), '55555')
 
-'ตรว�?สอ�?�?ุ�?ม Submit �?ม�?สามารถ�?ด�?ด�?'
+'Verify submit button is not clickable'
 WebUI.verifyElementNotClickable(findTestObject('Edit user profile/Edit/button_SUBMIT'))
 
-'�?รอ�?�?ื�?อที�?ถู�?รู�?�?�?�?'
+'Fill firstname '
 WebUI.setText(findTestObject('Edit user profile/Edit//input_firstname'), 'Piratchana')
 
-'ล�?�?�?อ�?วาม�?�?�?ล�?อ�?�?�?อ�?วาม Last name'
+'Delete Last name'
 WebUI.setText(findTestObject('Edit user profile/Edit//input_lastname'), 'e')
 
-'ล�?�?�?อ�?วาม�?�?�?ล�?อ�?�?�?อ�?วาม Last name'
+'Delete Last name'
 WebUI.sendKeys(findTestObject('Edit user profile/Edit//input_lastname'), Keys.chord(Keys.BACK_SPACE), FailureHandling.STOP_ON_FAILURE)
 
-'ตรว�?สอ�?�?ุ�?ม Submit �?ม�?สามารถ�?ด�?ด�?'
+'Verify Submit button not clickable'
 WebUI.verifyElementNotClickable(findTestObject('Edit user profile/Edit/button_SUBMIT'))
 
-'�?รอ�?�?ามส�?ุลเ�?�?�?ตัวเล�?'
+'Fill lastname by number'
 WebUI.setText(findTestObject('Edit user profile/Edit//input_lastname'), '55555')
 
-'ตรว�?สอ�?�?ุ�?ม Submit �?ม�?สามารถ�?ด�?ด�?'
+'Verify submit button is not clickable'
 WebUI.verifyElementNotClickable(findTestObject('Edit user profile/Edit/button_SUBMIT'))
 
-'�?รอ�?�?ามส�?ุลที�?ถู�?รู�?�?�?�?'
+'Fill lastname'
 WebUI.setText(findTestObject('Edit user profile/Edit//input_lastname'), 'Maksub')
 
-'ล�?�?�?อ�?วาม�?�?�?ล�?อ�?�?�?อ�?วาม Email'
+'Delete Email'
 WebUI.setText(findTestObject('Edit user profile/Edit/input_email'), 'e')
 
-'ล�?�?�?อ�?วาม�?�?�?ล�?อ�?�?�?อ�?วาม Email'
+'Delete Email'
 WebUI.sendKeys(findTestObject('Edit user profile/Edit/input_email'), Keys.chord(Keys.BACK_SPACE), FailureHandling.STOP_ON_FAILURE)
 
-'ตรว�?สอ�?�?ุ�?ม Submit �?ม�?สามารถ�?ด�?ด�?'
+'Verify submit button is not clickable'
 WebUI.verifyElementNotClickable(findTestObject('Edit user profile/Edit/button_SUBMIT'))
 
-'�?รอ�?อีเมล�?ม�?�?ส�? @ �?ละ�?ม�?มี .co'
+'Fill email without @ and .co'
 WebUI.setText(findTestObject('Edit user profile/Edit/input_email'), 'Cremecreme')
 
-'ตรว�?สอ�?�?ุ�?ม Submit �?ม�?สามารถ�?ด�?ด�?'
+'Verify submit button is not clickable'
 WebUI.verifyElementNotClickable(findTestObject('Edit user profile/Edit/button_SUBMIT'))
 
-'�?รอ�?อีเมลที�?ถู�?รู�?�?�?�?'
+'Fill email'
 WebUI.setText(findTestObject('Edit user profile/Edit/input_email'), df.format(date) + '@mail.com')
 
-'�?ด�?ุ�?ม Submit'
+'Click submit button'
 WebUI.click(findTestObject('Edit user profile/Edit/button_SUBMIT'))
 
-'ตรว�?สอ�?�?าร�?�?�?�?เตือ�? Edit Profile Successful'
+'Verify Edit Profile Successful text'
 WebUI.verifyElementPresent(findTestObject('Edit user profile/Edit/div_Edit Profile Successful.'), 2, FailureHandling.CONTINUE_ON_FAILURE)
 
-'�?ด�?ุ�?ม�?ิด�?าร�?�?�?�?เตือ�?'
+'Close alert pop up'
 WebUI.click(findTestObject('Edit user profile/Edit/button_'))
 
-'�?ิดเ�?ราเ�?อร�?'
 not_run: WebUI.closeBrowser(FailureHandling.CONTINUE_ON_FAILURE)
 
