@@ -4,6 +4,12 @@
    <name>td_Survey Single</name>
    <tag></tag>
    <elementGuidId>de77e4ca-f21a-410f-b398-5c02850b05b6</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//td[count(. | //*[@class = 'w3-center']) = count(//*[@class = 'w3-center'])][count(. | //*[text() = 'Survey Single']) = count(//*[text() = 'Survey Single'])]</value>
+      </entry>
+   </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
@@ -28,7 +34,7 @@
       <value>Survey Single</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>

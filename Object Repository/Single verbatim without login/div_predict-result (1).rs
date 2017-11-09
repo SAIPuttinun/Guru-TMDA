@@ -4,6 +4,12 @@
    <name>div_predict-result (1)</name>
    <tag></tag>
    <elementGuidId>d2d0d929-50d1-4ddb-b744-272ba8aa0d36</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//div[count(. | //*[@class = 'predict-result']) = count(//*[@class = 'predict-result'])]</value>
+      </entry>
+   </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
@@ -21,7 +27,7 @@
       <value>predict-result</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>

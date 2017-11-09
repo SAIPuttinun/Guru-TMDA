@@ -20,604 +20,604 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-not_run: WebUI.openBrowser('')
+WebUI.openBrowser('')
 
-not_run: WebUI.maximizeWindow()
+WebUI.maximizeWindow()
 
-not_run: WebUI.navigateToUrl('192.168.11.59')
+WebUI.navigateToUrl('192.168.11.59')
 
-not_run: WebUI.click(findTestObject('Page_Guru TMDA/span_Login'))
+WebUI.click(findTestObject('Page_Guru TMDA/span_Login'))
 
-not_run: WebUI.setText(findTestObject('Page_Guru TMDA (1)/input_ng-untouched ng-valid ng'), 'creme')
+WebUI.setText(findTestObject('Page_Guru TMDA (1)/input_ng-untouched ng-valid ng'), 'creme')
 
-not_run: WebUI.setText(findTestObject('Page_Guru TMDA (1)/input_ng-untouched ng-pristine'), '1234')
+WebUI.setText(findTestObject('Page_Guru TMDA (1)/input_ng-untouched ng-pristine'), '1234')
 
-'-สิ�?�?สุด�?ารทดสอ�? login\r\n'
-not_run: WebUI.submit(findTestObject('Page_Guru TMDA (1)/button_Login'))
+'-สิ�?�?สุด�?ารทดสอ�? login\r\n'
+WebUI.submit(findTestObject('Page_Guru TMDA (1)/button_Login'))
 
-'�?ด�?ุ�?ม Log'
+'click log buttom'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/a_Log'))
 
-'เอาเ�?อเ�?อร�?�?ี�?ที�?�?�?ล�? single เ�?ื�?อดู preview'
+'Show preview ----> Cursor mouse at sigle file '
 WebUI.mouseOver(findTestObject('Search history log/search history log/span_2'))
 
-'ตรว�?สอ�? pop up preview �?อ�?�?�?ล�? single'
+'verify pop up preview -->sigle file'
 WebUI.verifyElementPresent(findTestObject('Search history log/search history log/div_ngxp__container ngxp__anim'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
-'�?ด�?ุ�?ม preview �?อ�?�?�?ล�? multiple'
+'click preview button -->multiple file'
 WebUI.click(findTestObject('Search history log/search history log/button_Preview'))
 
-'�?ด�?ุ�?ม�?า�?�?ะ�?าทที�?ห�?�?าต�?า�? preview'
+'click X preview showing'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/i_fa fa-times w3-xlarge w3-tex'))
 
-'ทำเ�?รื�?อ�?หมาย�?า�?ถู�?หลั�?ราย�?ารที�?เลือ�?'
+'select file on checkbox '
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/input_ng-untouched ng-pristine'))
 
-'-�?ด�?ุ�?ม export สิ�?�?สุด�?ารทดสอ�?�?�?อมูลทั�?�?หมด (All) วั�?�?ั�?�?ุ�?ั�? �?ดย�?ด preview �?ดเลือ�?ราย�?าร  �?ละ�?ด export'
+'click export button'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/button_Export'))
 
-'---ตรว�?สอ�?�?ล'
+'---verify file'
 WebUI.verifyElementPresent(findTestObject('Search history log/search history log/td_Survey Single'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
-'---ตรว�?สอ�?�?ล'
+'---verify file'
 WebUI.verifyElementPresent(findTestObject('Search history log/search history log//td_Survey Multiple'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
-'เลือ�?�?ระเภท�?ารทำ�?าย เ�?�?�? single'
+'select precit type -->single'
 WebUI.selectOptionByValue(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/select_serach_type'), 
     '1', true)
 
-'เอาเ�?อเ�?อร�?�?ี�?ที�?�?�?ล�? single เ�?ื�?อดู preview'
+'Show preview ----> Cursor mouse at sigle file '
 WebUI.mouseOver(findTestObject('Search history log/search history log//span_3'))
 
-'ตรว�?สอ�? pop up preview �?อ�?�?�?ล�? single'
+'verify pop up preview -->sigle file'
 WebUI.verifyElementPresent(findTestObject('Search history log/search history log/div_ngxp__container ngxp__anim003'), 5, 
     FailureHandling.CONTINUE_ON_FAILURE)
 
-'ทำเ�?รื�?อ�?หมาย�?า�?ถู�?หลั�?ราย�?ารที�?เลือ�?'
+'select file on checkbox '
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/input_ng-valid ng-dirty ng-tou'))
 
-'-�?ด�?ุ�?ม export สิ�?�?สุด�?ารทดสอ�?�?�?อมูล single วั�?�?ั�?�?ุ�?ั�? �?ดย�?ด preview �?ดเลือ�?ราย�?าร  �?ละ�?ด export'
+'click export button'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/button_Export'))
 
-'---ตรว�?สอ�?�?ล'
+'---verify file'
 WebUI.verifyElementPresent(findTestObject('Search history log/search history log/td_Survey Single'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
-'เลือ�?�?ระเภท�?ารทำ�?าย เ�?�?�? multiple'
+'เลือ�?�?ระเภท�?ารทำ�?าย เ�?�?�? multiple'
 WebUI.selectOptionByValue(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/select_serach_type'), 
     '2', true)
 
-'�?ด�?ุ�?ม preview �?อ�?�?�?ล�? multiple'
+'click preview button -->multiple file'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/button_Preview'))
 
-'�?ด�?ุ�?ม�?า�?�?ะ�?าทที�?ห�?�?าต�?า�? preview'
+'�?ด�?ุ�?ม�?า�?�?ะ�?าทที�?ห�?�?าต�?า�? preview'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/i_fa fa-times w3-xlarge w3-tex'))
 
-'ทำเ�?รื�?อ�?หมาย�?า�?ถู�?หลั�?ราย�?ารที�?เลือ�?'
+'ทำเ�?รื�?อ�?หมาย�?า�?ถู�?หลั�?ราย�?ารที�?เลือ�?'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/input_ng-valid ng-dirty ng-tou'))
 
-'-�?ด�?�?ม export สิ�?�?สุด�?ารทดสอ�?�?�?อมูล multiple วั�?�?ั�?�?ุ�?ั�? �?ดย�?ด preview �?ดเลือ�?ราย�?าร  �?ละ�?ด export'
+'click export button'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/button_Export'))
 
-'---ตรว�?สอ�?�?ล'
+'---verify file'
 WebUI.verifyElementPresent(findTestObject('Search history log/search history log//td_Survey Multiple'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
-'เลือ�?�?ระเภท�?ารทำ�?ายเ�?�?�? all'
+'เลือ�?�?ระเภท�?ารทำ�?ายเ�?�?�? all'
 WebUI.selectOptionByIndex(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/select_serach_type'), 
     '0', FailureHandling.STOP_ON_FAILURE)
 
-'เอาเ�?อเ�?อร�?�?ี�?ที�?�?�?ล�? single เ�?ื�?อดู preview'
+'Show preview ----> Cursor mouse at sigle file '
 WebUI.mouseOver(findTestObject('Search history log/search history log//span_4'))
 
-'ตรว�?สอ�? pop up preview �?อ�?�?�?ล�? single'
+'verify pop up preview -->sigle file'
 WebUI.verifyElementPresent(findTestObject('Search history log/search history log//div_ngxp__container ngxp__anim004'), 5, 
     FailureHandling.CONTINUE_ON_FAILURE)
 
-'�?ด�?ุ�?ม preview �?อ�?�?�?ล�? multiple'
-WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/button_Preview'))
+'click preview button -->multiple file'
+WebUI.click(findTestObject('Search history log/search history log/button_Preview'))
 
-'�?ด�?ุ�?ม�?า�?�?ะ�?าทที�?ห�?�?าต�?า�? preview'
+'click X preview showing'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/i_fa fa-times w3-xlarge w3-tex'))
 
-'-ทำเ�?รื�?อ�?หมาย�?า�?ถู�?หลั�?ราย�?ารที�?เลือ�? สิ�?�?สุด�?ารทดสอ�?�?�?อมูลทั�?�?หมด (All) วั�?�?ั�?�?ุ�?ั�? �?ดย�?ด preview �?ละ�?ดเลือ�?ราย�?าร'
+'-ทำเ�?รื�?อ�?หมาย�?า�?ถู�?หลั�?ราย�?ารที�?เลือ�? สิ�?�?สุด�?ารทดสอ�?�?�?อมูลทั�?�?หมด (All) วั�?�?ั�?�?ุ�?ั�? �?ดย�?ด preview �?ละ�?ดเลือ�?ราย�?าร'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/input_ng-valid ng-dirty ng-tou'))
 
-'---ตรว�?สอ�?�?ล'
+'---verify file'
 WebUI.verifyElementPresent(findTestObject('Search history log/search history log/td_Survey Single'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
-'---ตรว�?สอ�?�?ล'
+'---verify file'
 WebUI.verifyElementPresent(findTestObject('Search history log/search history log//td_Survey Multiple'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
-'เลือ�?�?ระเภท�?ารทำ�?าย เ�?�?�? single'
+'select precit type -->single'
 WebUI.selectOptionByValue(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/select_serach_type'), 
     '1', true)
 
-'เอาเ�?อเ�?อร�?�?ี�?ที�?�?�?ล�? single เ�?ื�?อดู preview'
+'Show preview ----> Cursor mouse at sigle file '
 WebUI.mouseOver(findTestObject('Search history log/search history log//span_5'))
 
-'ตรว�?สอ�? pop up preview �?อ�?�?�?ล�? single'
+'verify pop up preview -->sigle file'
 WebUI.verifyElementPresent(findTestObject('Search history log/search history log/div_ngxp__container ngxp__anim005'), 5, 
     FailureHandling.CONTINUE_ON_FAILURE)
 
-'-ทำเ�?รื�?อ�?หมาย�?า�?ถู�?หลั�?ราย�?ารที�?เลือ�? สิ�?�?สุด�?ารทดสอ�?�?�?อมูล single วั�?�?ั�?�?ุ�?ั�? �?ดย�?ด preview �?ละ�?ดเลือ�?ราย�?าร'
+'-ทำเ�?รื�?อ�?หมาย�?า�?ถู�?หลั�?ราย�?ารที�?เลือ�? สิ�?�?สุด�?ารทดสอ�?�?�?อมูล single วั�?�?ั�?�?ุ�?ั�? �?ดย�?ด preview �?ละ�?ดเลือ�?ราย�?าร'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/input_ng-valid ng-dirty ng-tou'))
 
-'---ตรว�?สอ�?�?ล'
+'---ตรว�?สอ�?�?ล'
 WebUI.verifyElementPresent(findTestObject('Search history log/search history log//td_Survey Single'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
-'เลือ�?�?ระเภท�?ารทำ�?าย เ�?�?�? multiple'
+'select precit type --> multiple'
 WebUI.selectOptionByValue(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/select_serach_type'), 
     '2', true)
 
-'�?ด�?ุ�?ม preview �?อ�?�?�?ล�? multiple'
+'�?ด�?ุ�?ม preview �?อ�?�?�?ล�? multiple'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/button_Preview'))
 
-'�?ด�?ุ�?ม�?า�?�?ะ�?าทที�?ห�?�?าต�?า�? preview'
+'�?ด�?ุ�?ม�?า�?�?ะ�?าทที�?ห�?�?าต�?า�? preview'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/i_fa fa-times w3-xlarge w3-tex'))
 
-'-ทำเ�?รื�?อ�?หมาย�?า�?ถู�?หลั�?ราย�?ารที�?เลือ�? สิ�?�?สุด�?ารทดสอ�?�?�?อมูล multiple วั�?�?ั�?�?ุ�?ั�? �?ดย�?ด preview �?ละ�?ดเลือ�?ราย�?าร'
+'-ทำเ�?รื�?อ�?หมาย�?า�?ถู�?หลั�?ราย�?ารที�?เลือ�? สิ�?�?สุด�?ารทดสอ�?�?�?อมูล multiple วั�?�?ั�?�?ุ�?ั�? �?ดย�?ด preview �?ละ�?ดเลือ�?ราย�?าร'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/input_ng-valid ng-dirty ng-tou'))
 
-'---ตรว�?สอ�?�?ล'
+'---ตรว�?สอ�?�?ล'
 WebUI.verifyElementPresent(findTestObject('Search history log/search history log//td_Survey Multiple'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
-'เลือ�?�?ระเภท�?ารทำ�?าย เ�?�?�? all'
+'เลือ�?�?ระเภท�?ารทำ�?าย เ�?�?�? all'
 WebUI.selectOptionByIndex(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/select_serach_type'), 
     '0', FailureHandling.STOP_ON_FAILURE)
 
-'เอาเ�?อเ�?อร�?�?ี�?ที�?�?�?ล�? single เ�?ื�?อดู preview'
+'Show preview ----> Cursor mouse at sigle file '
 WebUI.mouseOver(findTestObject('Search history log/search history log//span_2'))
 
-'ตรว�?สอ�? pop up preview �?อ�?�?�?ล�? single'
+'verify pop up preview -->sigle file'
 WebUI.verifyElementPresent(findTestObject('Search history log/search history log/div_ngxp__container ngxp__anim'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
-'�?ด�?ุ�?ม preview �?อ�?�?�?ล�? multiple'
+'click preview button -->multiple file'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/button_Preview'))
 
-'�?ด�?ุ�?ม�?า�?�?ะ�?าทที�?ห�?�?าต�?า�? preview'
+'click X preview showing'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/i_fa fa-times w3-xlarge w3-tex'))
 
-'-�?ด�?ุ�?ม export สิ�?�?สุด�?ารทดสอ�?�?�?อมูลทั�?�?หมด (All) วั�?�?ั�?�?ุ�?ั�? �?ดย�?ด preview �?ละ�?ด export'
+'click export button'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/button_Export'))
 
-'---ตรว�?สอ�?�?ล'
+'---ตรว�?สอ�?�?ล'
 WebUI.verifyElementPresent(findTestObject('Search history log/search history log/td_Survey Single'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
-'---ตรว�?สอ�?�?ล'
+'---ตรว�?สอ�?�?ล'
 WebUI.verifyElementPresent(findTestObject('Search history log/search history log//td_Survey Multiple'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
-'เลือ�?�?ระเภท�?ารทำ�?าย เ�?�?�? single'
+'select precit type -->single'
 WebUI.selectOptionByValue(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/select_serach_type'), 
     '1', true)
 
-'เอาเ�?อเ�?อร�?�?ี�?ที�?�?�?ล�? single เ�?ื�?อดู preview'
+'Show preview ----> Cursor mouse at sigle file '
 WebUI.mouseOver(findTestObject('Search history log/search history log/span_8'))
 
-'ตรว�?สอ�? pop up preview �?อ�?�?�?ล�? single'
+'verify pop up preview -->sigle file'
 WebUI.verifyElementPresent(findTestObject('Search history log/search history log/div_ngxp__container ngxp__anim'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
-'-�?ด�?ุ�?ม export สิ�?�?สุด�?ารทดสอ�?�?�?อมูล single วั�?�?ั�?�?ุ�?ั�? �?ดย�?ด preview �?ละ�?ด export'
+'click export button'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/button_Export'))
 
-'---ตรว�?สอ�?�?ล'
+'---ตรว�?สอ�?�?ล'
 WebUI.verifyElementPresent(findTestObject('Search history log/search history log/td_Survey Single'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
-'เลือ�?�?ระเภท�?ารทำ�?าย multiple'
+'select precit type --> multiple'
 WebUI.selectOptionByValue(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/select_serach_type'), 
     '2', true)
 
-'�?ด�?ุ�?ม preview �?อ�?�?�?ล�? multiple'
+'�?ด�?ุ�?ม preview �?อ�?�?�?ล�? multiple'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/button_Preview'))
 
-'�?ด�?ุ�?ม�?า�?�?ะ�?าทที�?ห�?�?าต�?า�? preview'
+'�?ด�?ุ�?ม�?า�?�?ะ�?าทที�?ห�?�?าต�?า�? preview'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA/i_fa fa-times w3-xlarge w3-tex'))
 
-'-�?ด�?ุ�?ม export สิ�?�?สุด�?ารทดสอ�?�?�?อมูล multiple วั�?�?ั�?�?ุ�?ั�? �?ดย�?ด preview �?ละ�?ด export'
+'click export button'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/button_Export'))
 
-'---ตรว�?สอ�?�?ล'
+'---ตรว�?สอ�?�?ล'
 WebUI.verifyElementPresent(findTestObject('Search history log/search history log//td_Survey Multiple'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
-'�?ส�?�?�?อมูลวั�?ที�?ที�?ต�?อ�?�?าร�?�?�?หา �?�? input �?ร�?'
+'�?ส�?�?�?อมูลวั�?ที�?ที�?ต�?อ�?�?าร�?�?�?หา �?�? input �?ร�?'
 WebUI.setText(findTestObject('Search history log/search history log/input_selection ng-untouched n'), '02/11/2017')
 
-'เลือ�?�?ระเภท�?ารทำ�?าย all'
+'เลือ�?�?ระเภท�?ารทำ�?าย all'
 WebUI.selectOptionByIndex(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/select_serach_type'), 
     '0', FailureHandling.STOP_ON_FAILURE)
 
-'เอาเ�?อเ�?อร�?�?ี�?ที�?�?�?ล�? single เ�?ื�?อดู preview'
+'Show preview ----> Cursor mouse at sigle file '
 WebUI.mouseOver(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/span_ (1)'))
 
-'ตรว�?สอ�? pop up preview �?อ�?�?�?ล�? single'
+'verify pop up preview -->sigle file'
 WebUI.verifyElementPresent(findTestObject('Search history log/search history log/div_ngxp__container ngxp__008'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
-'เอาเ�?อเ�?อร�?�?ี�?ที�?�?�?ล�? single เ�?ื�?อดู preview'
+'Show preview ----> Cursor mouse at sigle file '
 WebUI.mouseOver(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/span_ (1)'))
 
-'ตรว�?สอ�? pop up preview �?อ�?�?�?ล�? single'
+'verify pop up preview -->sigle file'
 WebUI.verifyElementPresent(findTestObject('Search history log/search history log/div_ngxp__container ngxp__008'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
-'�?ด�?ุ�?ม preview �?อ�?�?�?ล�? multiple'
+'click preview button -->multiple file'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/button_Preview'))
 
-'�?ด�?ุ�?ม�?า�?�?ะ�?าทที�?ห�?�?าต�?า�? preview'
+'click X preview showing'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/i_fa fa-times w3-xlarge w3-tex'))
 
-'ทำเ�?รื�?อ�?หมาย�?าถู�?หลั�?ราย�?ารที�?เลือ�?'
+'ทำเ�?รื�?อ�?หมาย�?าถู�?หลั�?ราย�?ารที�?เลือ�?'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/input_ng-valid ng-dirty ng-tou'))
 
-'-�?ด�?ุ�?ม export สิ�?�?สุด�?ารทดสอ�?�?�?อมูลทั�?�?หมด (All) วั�?ที�? 11/10/2017 �?ดย�?ด preview �?ดเลือ�?ราย�?าร �?ละ�?ด export'
+'click export button'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/button_Export'))
 
-'---ตรว�?สอ�?�?ล'
+'---ตรว�?สอ�?�?ล'
 WebUI.verifyElementPresent(findTestObject('Search history log/search history log/td_Survey Single'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
-'---ตรว�?สอ�?�?ล'
+'---ตรว�?สอ�?�?ล'
 WebUI.verifyElementPresent(findTestObject('Search history log/search history log//td_Survey Multiple'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
-'เลือ�?�?ระเภท�?ารทำ�?าย เ�?�?�? single'
+'select precit type -->single'
 WebUI.selectOptionByValue(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/select_serach_type'), 
     '1', true)
 
-'เอาเ�?อเ�?อร�?�?ี�?ที�?�?�?ล�? single เ�?ื�?อดู preview'
+'Show preview ----> Cursor mouse at sigle file '
 WebUI.mouseOver(findTestObject('Search history log/search history log//span_ 6'))
 
-'ตรว�?สอ�? pop up preview �?อ�?�?�?ล�? single'
+'verify pop up preview -->sigle file'
 WebUI.verifyElementPresent(findTestObject('Search history log/search history log/div_ngxp__container ngxp__anim006'), 5, 
     FailureHandling.CONTINUE_ON_FAILURE)
 
-'ทำเ�?รื�?อ�?หมาย�?าถู�?หลั�?ราย�?ารที�?เลือ�?'
+'ทำเ�?รื�?อ�?หมาย�?าถู�?หลั�?ราย�?ารที�?เลือ�?'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/input_ng-valid ng-dirty ng-tou'))
 
-'-�?ด�?ุ�?ม export สิ�?�?สุด�?ารทดสอ�?�?�?อมูล single วั�?ที�? 11/10/2017 �?ดย�?ด preview �?ดเลือ�?ราย�?าร �?ละ�?ด export'
+'click export button'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/button_Export'))
 
-'---ตรว�?สอ�?�?ล'
+'---ตรว�?สอ�?�?ล'
 WebUI.verifyElementPresent(findTestObject('Search history log/search history log/td_Survey Single'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
-'เลือ�?�?ระเภท�?ารทำ�?าย เ�?�?�? multiple'
+'select precit type --> multiple'
 WebUI.selectOptionByValue(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/select_serach_type'), 
     '2', true)
 
-'�?ด�?ุ�?ม preview �?อ�?�?�?ล�? multiple'
+'�?ด�?ุ�?ม preview �?อ�?�?�?ล�? multiple'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/button_Preview'))
 
-'�?ด�?ุ�?ม�?า�?�?ะ�?าทที�?ห�?�?าต�?า�? preview'
+'�?ด�?ุ�?ม�?า�?�?ะ�?าทที�?ห�?�?าต�?า�? preview'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/i_fa fa-times w3-xlarge w3-tex'))
 
-'ทำเ�?รื�?อ�?หมาย�?าถู�?หลั�?ราย�?ารที�?เลือ�?'
+'ทำเ�?รื�?อ�?หมาย�?าถู�?หลั�?ราย�?ารที�?เลือ�?'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/input_ng-valid ng-dirty ng-tou'))
 
-'-�?ด�?ุ�?ม export สิ�?�?สุด�?ารทดสอ�?�?�?อมูล multiple วั�?ที�? 11/10/2017 �?ดย�?ด preview �?ดเลือ�?ราย�?าร �?ละ�?ด export'
+'click export button'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/button_Export'))
 
-'---ตรว�?สอ�?�?ล'
+'---ตรว�?สอ�?�?ล'
 WebUI.verifyElementPresent(findTestObject('Search history log/search history log//td_Survey Multiple'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
-'เลือ�?�?ระเภท�?ารทำ�?าย เ�?�?�? all'
+'เลือ�?�?ระเภท�?ารทำ�?าย เ�?�?�? all'
 WebUI.selectOptionByIndex(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/select_serach_type'), 
     '0', FailureHandling.STOP_ON_FAILURE)
 
-'เอาเ�?อเ�?อร�?�?ี�?ที�?�?�?ล�? single เ�?ื�?อดู preview'
+'Show preview ----> Cursor mouse at sigle file '
 WebUI.mouseOver(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/span_ (1)'))
 
-'ตรว�?สอ�? pop up preview �?อ�?�?�?ล�? single'
+'verify pop up preview -->sigle file'
 WebUI.verifyElementPresent(findTestObject('Search history log/search history log/div_ngxp__container ngxp__008'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
-'�?ด�?ุ�?ม preview �?อ�?�?�?ล�? multiple'
+'click preview button -->multiple file'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/button_Preview'))
 
-'�?ด�?ุ�?ม�?า�?�?ะ�?าทที�?ห�?�?าต�?า�? preview'
+'click X preview showing'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/i_fa fa-times w3-xlarge w3-tex'))
 
-'-ทำเ�?รื�?อ�?หมาย�?าถู�?หลั�?ราย�?ารที�?เลือ�? สิ�?�?สุด�?ารทดสอ�?�?�?อมูลทั�?�?หมด (All) วั�?ที�? 11/10/2017 �?ดย�?ด preview �?ละ�?ดเลือ�?ราย�?าร'
+'-ทำเ�?รื�?อ�?หมาย�?าถู�?หลั�?ราย�?ารที�?เลือ�? สิ�?�?สุด�?ารทดสอ�?�?�?อมูลทั�?�?หมด (All) วั�?ที�? 11/10/2017 �?ดย�?ด preview �?ละ�?ดเลือ�?ราย�?าร'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/input_ng-valid ng-dirty ng-tou'))
 
-'---ตรว�?สอ�?�?ล'
+'---ตรว�?สอ�?�?ล'
 WebUI.verifyElementPresent(findTestObject('Search history log/search history log/td_Survey Single'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
-'---ตรว�?สอ�?�?ล'
+'---ตรว�?สอ�?�?ล'
 WebUI.verifyElementPresent(findTestObject('Search history log/search history log//td_Survey Multiple'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
-'เลือ�?�?ระเภท�?ารทำ�?าย เ�?�?�? single'
+'select precit type -->single'
 WebUI.selectOptionByValue(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/select_serach_type'), 
     '1', true)
 
-'เอาเ�?อเ�?อร�?�?ี�?ที�?�?�?ล�? single เ�?ื�?อดู preview'
+'Show preview ----> Cursor mouse at sigle file '
 WebUI.mouseOver(findTestObject('Search history log/search history log/span_ 11'))
 
-'ตรว�?สอ�? pop up preview �?อ�?�?�?ล�? single'
+'verify pop up preview -->sigle file'
 WebUI.verifyElementPresent(findTestObject('Search history log/search history log/div_ngxp__container ngxp__008'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
-'-ทำเ�?รื�?อ�?หมาย�?าถู�?หลั�?ราย�?ารที�?เลือ�? สิ�?�?สุด�?ารทดสอ�?�?�?อมูล single วั�?ที�? 11/10/2017 �?ดย�?ด preview �?ละ�?ดเลือ�?ราย�?าร'
+'-ทำเ�?รื�?อ�?หมาย�?าถู�?หลั�?ราย�?ารที�?เลือ�? สิ�?�?สุด�?ารทดสอ�?�?�?อมูล single วั�?ที�? 11/10/2017 �?ดย�?ด preview �?ละ�?ดเลือ�?ราย�?าร'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/input_ng-valid ng-dirty ng-tou'))
 
-'---ตรว�?สอ�?�?ล'
+'---ตรว�?สอ�?�?ล'
 WebUI.verifyElementPresent(findTestObject('Search history log/search history log/td_Survey Single'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
-'เลือ�?�?ระเภท�?ารทำ�?าย  เ�?�?�? multiple'
+'select precit type --> multiple'
 WebUI.selectOptionByValue(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/select_serach_type'), 
     '2', true)
 
-'�?ด�?ุ�?ม preview �?อ�?�?�?ล�? multiple'
+'click preview button -->multiple file'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/button_Preview'))
 
-'�?ด�?ุ�?ม�?า�?�?ะ�?าทที�?ห�?�?าต�?า�? preview'
+'�?ด�?ุ�?ม�?า�?�?ะ�?าทที�?ห�?�?าต�?า�? preview'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/i_fa fa-times w3-xlarge w3-tex'))
 
-'-ทำเ�?รื�?อ�?หมาย�?าถู�?หลั�?ราย�?ารที�?เลือ�? สิ�?�?สุด�?ารทดสอ�?�?�?อมูล multiple วั�?ที�? 11/10/2017 �?ดย�?ด preview �?ละ�?ดเลือ�?ราย�?าร'
+'-ทำเ�?รื�?อ�?หมาย�?าถู�?หลั�?ราย�?ารที�?เลือ�? สิ�?�?สุด�?ารทดสอ�?�?�?อมูล multiple วั�?ที�? 11/10/2017 �?ดย�?ด preview �?ละ�?ดเลือ�?ราย�?าร'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/input_ng-valid ng-dirty ng-tou'))
 
-'---ตรว�?สอ�?�?ล'
+'---ตรว�?สอ�?�?ล'
 WebUI.verifyElementPresent(findTestObject('Search history log/search history log//td_Survey Multiple'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
-'เลือ�?�?ระเภท�?ารทำ�?าย เ�?�?�? all\r\n'
+'เลือ�?�?ระเภท�?ารทำ�?าย เ�?�?�? all\r\n'
 WebUI.selectOptionByIndex(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/select_serach_type'), 
     '0', FailureHandling.STOP_ON_FAILURE)
 
-'เอาเ�?อเ�?อร�?�?ี�?ที�?�?�?ล�? single เ�?ื�?อดู preview'
+'Show preview ----> Cursor mouse at sigle file '
 WebUI.mouseOver(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/span_ (1)'))
 
-'ตรว�?สอ�? pop up preview �?อ�?�?�?ล�? single'
+'verify pop up preview -->sigle file'
 WebUI.verifyElementPresent(findTestObject('Search history log/search history log/div_ngxp__container ngxp__008'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
-'�?ด�?ุ�?ม preview �?อ�?�?�?ล�? multiple'
+'click preview button -->multiple file'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/button_Preview'))
 
-'�?ด�?ุ�?ม�?า�?�?ะ�?าทที�?ห�?�?าต�?า�? preview'
+'click X preview showing'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/i_fa fa-times w3-xlarge w3-tex'))
 
-'-�?ด�?ุ�?ม export สิ�?�?สุด�?ารทดสอ�?�?�?อมูลทั�?�?หมด (All) วั�?ที�? 11/10/2017 �?ดย�?ด preview �?ละ�?ด export'
+'click export button'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/button_Export'))
 
-'---ตรว�?สอ�?�?ล'
+'---ตรว�?สอ�?�?ล'
 WebUI.verifyElementPresent(findTestObject('Search history log/search history log/td_Survey Single'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
-'---ตรว�?สอ�?�?ล'
+'---ตรว�?สอ�?�?ล'
 WebUI.verifyElementPresent(findTestObject('Search history log/search history log//td_Survey Multiple'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
-'เลือ�?�?ระเภท�?ารทำ�?าย เ�?�?�? single'
+'select precit type -->single'
 WebUI.selectOptionByValue(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/select_serach_type'), 
     '1', true)
 
-'เอาเ�?อเ�?อร�?�?ี�?ที�?�?�?ล�? single เ�?ื�?อดู preview'
+'Show preview ----> Cursor mouse at sigle file '
 WebUI.mouseOver(findTestObject('Search history log/search history log/span_ 12345689'))
 
-'ตรว�?สอ�? pop up preview �?อ�?�?�?ล�? single'
+'verify pop up preview -->sigle file'
 WebUI.verifyElementPresent(findTestObject('Search history log/search history log/div_ngxp__container ngxp__008'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
-'-�?ด�?ุ�?ม export สิ�?�?สุด�?ารทดสอ�?�?�?อมูล single วั�?ที�? 11/10/2017 �?ดย�?ด preview �?ละ�?ด export'
+'click export button'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/button_Export'))
 
-'---ตรว�?สอ�?�?ล'
+'---ตรว�?สอ�?�?ล'
 WebUI.verifyElementPresent(findTestObject('Search history log/search history log/td_Survey Single'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
-'เลือ�?�?ระเภท�?ารทำ�?าย เ�?�?�? multiple'
+'select precit type --> multiple'
 WebUI.selectOptionByValue(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/select_serach_type'), 
     '2', true)
 
-'�?ด�?ุ�?ม preview �?อ�?�?�?ล�? multiple'
+'click preview button -->multiple file'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/button_Preview'))
 
-'�?ด�?ุ�?ม�?า�?�?ะ�?าทที�?ห�?�?าต�?า�? preview'
+'click X preview showing'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/i_fa fa-times w3-xlarge w3-tex'))
 
-'-�?ด�?ุ�?ม export สิ�?�?สุด�?ารทดสอ�?�?�?อมูล multi วั�?ที�? 11/10/2017 �?ดย�?ด preview �?ละ�?ด export'
+'-�?ด�?ุ�?ม export สิ�?�?สุด�?ารทดสอ�?�?�?อมูล multi วั�?ที�? 11/10/2017 �?ดย�?ด preview �?ละ�?ด export'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/button_Export'))
 
-'---ตรว�?สอ�?�?ล'
+'---ตรว�?สอ�?�?ล'
 WebUI.verifyElementPresent(findTestObject('Search history log/search history log//td_Survey Multiple'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
-'�?ส�?�?�?อมูลวั�?ที�? �?�? input หลั�?'
+'�?ส�?�?�?อมูลวั�?ที�? �?�? input หลั�?'
 WebUI.setText(findTestObject('Search history log/search history log/input_selection ng-untouched n (1)'), '02/11/2017')
 
-'เลือ�?�?ระเภท�?ารทำ�?าย เ�?�?�? all'
+'เลือ�?�?ระเภท�?ารทำ�?าย เ�?�?�? all'
 WebUI.selectOptionByIndex(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/select_serach_type'), 
     '0', FailureHandling.STOP_ON_FAILURE)
 
-'เอาเ�?อเ�?อร�?�?ี�?ที�?�?�?ล�? single เ�?ื�?อดู preview'
+'Show preview ----> Cursor mouse at sigle file '
 WebUI.mouseOver(findTestObject('Search history log/search history log/span_ '))
 
-'ตรว�?สอ�? pop up preview �?อ�?�?�?ล�? single'
+'verify pop up preview -->sigle file'
 WebUI.verifyElementPresent(findTestObject('Search history log/search history log/div_ngxp__container ngxp__008'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
-'�?ด�?ุ�?ม preview �?อ�?�?�?ล�? multiple'
+'click preview button -->multiple file'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/button_Preview'))
 
-'�?ด�?ุ�?ม�?า�?�?ะ�?าทที�?ห�?�?าต�?า�? preview'
+'click X preview showing'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/i_fa fa-times w3-xlarge w3-tex'))
 
-'ทำเ�?รื�?อ�?หมาย�?าถู�?หลั�?ราย�?ารที�?เลือ�?'
+'ทำเ�?รื�?อ�?หมาย�?าถู�?หลั�?ราย�?ารที�?เลือ�?'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/input_ng-valid ng-dirty ng-tou'))
 
-'-�?ด�?ุ�?ม export สิ�?�?สุด�?ารทดสอ�?�?�?อมูลทั�?�?หมด (All) วั�?ที�? 11/10/2017-31/11/2017 �?ดย�?ด preview �?ดเลือ�?ราย�?าร �?ละ�?ด export'
+'-�?ด�?ุ�?ม export สิ�?�?สุด�?ารทดสอ�?�?�?อมูลทั�?�?หมด (All) วั�?ที�? 11/10/2017-31/11/2017 �?ดย�?ด preview �?ดเลือ�?ราย�?าร �?ละ�?ด export'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/button_Export'))
 
-'---ตรว�?สอ�?�?ล'
+'---ตรว�?สอ�?�?ล'
 WebUI.verifyElementPresent(findTestObject('Search history log/search history log/td_Survey Single'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
-'---ตรว�?สอ�?�?ล'
+'---ตรว�?สอ�?�?ล'
 WebUI.verifyElementPresent(findTestObject('Search history log/search history log//td_Survey Multiple'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
-'เลือ�?�?ระเภท�?ารทำ�?าย เ�?�?�? single'
+'select precit type -->single'
 WebUI.selectOptionByValue(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/select_serach_type'), 
     '1', true)
 
-'เอาเ�?อเ�?อร�?�?ี�?ที�?�?�?ล�? single เ�?ื�?อดู preview'
+'Show preview ----> Cursor mouse at sigle file '
 WebUI.mouseOver(findTestObject('Search history log/search history log/span_10'))
 
-'ตรว�?สอ�? pop up preview �?อ�?�?�?ล�? single'
+'verify pop up preview -->sigle file'
 WebUI.verifyElementPresent(findTestObject('Search history log/search history log/div_ngxp__container ngxp__008'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
-'ทำเ�?รื�?อ�?หมาย�?าถู�?หลั�?ราย�?ารที�?เลือ�?'
+'ทำเ�?รื�?อ�?หมาย�?าถู�?หลั�?ราย�?ารที�?เลือ�?'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/input_ng-valid ng-dirty ng-tou'))
 
-'-�?ด�?ุ�?ม export สิ�?�?สุด�?ารทดสอ�?�?�?อมูล single วั�?ที�? 11/10/2017-31/11/2017 �?ดย�?ด preview �?ดเลือ�?ราย�?าร �?ละ�?ด export'
+'-�?ด�?ุ�?ม export สิ�?�?สุด�?ารทดสอ�?�?�?อมูล single วั�?ที�? 11/10/2017-31/11/2017 �?ดย�?ด preview �?ดเลือ�?ราย�?าร �?ละ�?ด export'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/button_Export'))
 
-'---ตรว�?สอ�?�?ล'
+'---ตรว�?สอ�?�?ล'
 WebUI.verifyElementPresent(findTestObject('Search history log/search history log/td_Survey Single'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
-'เลือ�?�?ระเภท�?ารทำ�?าย เ�?�?�? multiple\r\n'
+'select precit type --> multiple'
 WebUI.selectOptionByValue(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/select_serach_type'), 
     '2', true)
 
-'�?ด�?ุ�?ม preview �?อ�?�?�?ล�? multiple'
+'�?ด�?ุ�?ม preview �?อ�?�?�?ล�? multiple'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/button_Preview'))
 
-'�?ด�?ุ�?ม�?า�?�?ะ�?าทที�?ห�?�?าต�?า�? preview'
+'click X preview showing'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/i_fa fa-times w3-xlarge w3-tex'))
 
-'ทำเ�?รื�?อ�?หมาย�?าถู�?หลั�?ราย�?ารที�?เลือ�?'
+'ทำเ�?รื�?อ�?หมาย�?าถู�?หลั�?ราย�?ารที�?เลือ�?'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/input_ng-valid ng-dirty ng-tou'))
 
-'-�?ด�?ุ�?ม export สิ�?�?สุด�?ารทดสอ�?�?�?อมูล multiple วั�?ที�? 11/10/2017-31/11/2017 �?ดย�?ด preview �?ดเลือ�?ราย�?าร �?ละ�?ด export'
+'-�?ด�?ุ�?ม export สิ�?�?สุด�?ารทดสอ�?�?�?อมูล multiple วั�?ที�? 11/10/2017-31/11/2017 �?ดย�?ด preview �?ดเลือ�?ราย�?าร �?ละ�?ด export'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/button_Export'))
 
-'---ตรว�?สอ�?�?ล'
+'---ตรว�?สอ�?�?ล'
 WebUI.verifyElementPresent(findTestObject('Search history log/search history log//td_Survey Multiple'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
-'เลือ�?�?ระเภท�?ารทำ�?าย เ�?�?�? all\r\n'
+'เลือ�?�?ระเภท�?ารทำ�?าย เ�?�?�? all\r\n'
 WebUI.selectOptionByIndex(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/select_serach_type'), 
     '0', FailureHandling.STOP_ON_FAILURE)
 
-'เอาเ�?อเ�?อร�?�?ี�?ที�?�?�?ล�? single เ�?ื�?อดู preview'
+'Show preview ----> Cursor mouse at sigle file '
 WebUI.mouseOver(findTestObject('Search history log/search history log/span_  (1)'))
 
-'ตรว�?สอ�? pop up preview �?อ�?�?�?ล�? single'
+'verify pop up preview -->sigle file'
 WebUI.verifyElementPresent(findTestObject('Search history log/search history log/div_ngxp__container ngxp__008'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
-'�?ด�?ุ�?ม preview �?อ�?�?�?ล�? multiple'
+'�?ด�?ุ�?ม preview �?อ�?�?�?ล�? multiple'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/button_Preview'))
 
-'�?ด�?ุ�?ม�?า�?�?ะ�?าทที�?ห�?�?าต�?า�? preview'
+'click X preview showing'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/i_fa fa-times w3-xlarge w3-tex'))
 
-'-ทำเ�?รื�?อ�?หมาย�?าถู�?หลั�?ราย�?ารที�?เลือ�? สิ�?�?สุด�?ารทดสอ�?�?�?อมูลทั�?�?หมด (All) วั�?ที�? 11/10/2017-31/10/2017 �?ดย�?ด preview �?ละ�?ดเลือ�?ราย�?าร'
+'-ทำเ�?รื�?อ�?หมาย�?าถู�?หลั�?ราย�?ารที�?เลือ�? สิ�?�?สุด�?ารทดสอ�?�?�?อมูลทั�?�?หมด (All) วั�?ที�? 11/10/2017-31/10/2017 �?ดย�?ด preview �?ละ�?ดเลือ�?ราย�?าร'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/input_ng-valid ng-dirty ng-tou'))
 
-'---ตรว�?สอ�?�?ล'
+'---ตรว�?สอ�?�?ล'
 WebUI.verifyElementPresent(findTestObject('Search history log/search history log/td_Survey Single'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
-'---ตรว�?สอ�?�?ล'
+'---ตรว�?สอ�?�?ล'
 WebUI.verifyElementPresent(findTestObject('Search history log/search history log//td_Survey Multiple'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
-'เลือ�?�?ระเภท�?ารทำ�?าย เ�?�?�? single'
+'select precit type -->single'
 WebUI.selectOptionByValue(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/select_serach_type'), 
     '1', true)
 
-'เอาเ�?อเ�?อร�?�?ี�?ที�?�?�?ล�? single เ�?ื�?อดู preview'
+'Show preview ----> Cursor mouse at sigle file '
 WebUI.mouseOver(findTestObject('Search history log/search history log/span_10'))
 
-'ตรว�?สอ�? pop up preview �?อ�?�?�?ล�? single'
+'verify pop up preview -->sigle file'
 WebUI.verifyElementPresent(findTestObject('Search history log/search history log/div_ngxp__container ngxp__008'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
-'เอาเ�?อเ�?อร�?�?ี�?ที�?�?�?ล�? single เ�?ื�?อดู preview'
+'Show preview ----> Cursor mouse at sigle file '
 WebUI.mouseOver(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/span_'))
 
-'ตรว�?สอ�? pop up preview �?อ�?�?�?ล�? single'
+'verify pop up preview -->sigle file'
 WebUI.verifyElementPresent(findTestObject('Search history log/search history log/div_ngxp__container ngxp__008'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
-'-ทำเ�?รื�?อ�?หมาย�?าถู�?หลั�?ราย�?ารที�?เลือ�? สิ�?�?สุด�?ารทดสอ�?�?�?อมูล single วั�?ที�? 11/10/2017-31/10/2017 �?ดย�?ด preview �?ละ�?ดเลือ�?ราย�?าร'
+'click X preview showing'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/input_ng-valid ng-dirty ng-tou'))
 
-'---ตรว�?สอ�?�?ล'
+'---ตรว�?สอ�?�?ล'
 WebUI.verifyElementPresent(findTestObject('Search history log/search history log/td_Survey Single'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
-'เลือ�?�?ระเภท�?ารทำ�?าย เ�?�?�? multiple'
+'select precit type --> multiple'
 WebUI.selectOptionByValue(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/select_serach_type'), 
     '2', true)
 
-'�?ด�?ุ�?ม preview �?อ�?�?�?ล�? multiple'
+'�?ด�?ุ�?ม preview �?อ�?�?�?ล�? multiple'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/button_Preview'))
 
-'�?ด�?ุ�?ม�?า�?�?ะ�?าทที�?ห�?�?าต�?า�? preview'
+'�?ด�?ุ�?ม�?า�?�?ะ�?าทที�?ห�?�?าต�?า�? preview'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/i_fa fa-times w3-xlarge w3-tex'))
 
-'�?ด�?ุ�?ม preview �?อ�?�?�?ล�? multiple'
+'click preview button -->multiple file'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/button_Preview'))
 
-'�?ด�?ุ�?ม�?า�?�?ะ�?าทที�?ห�?�?าต�?า�? preview'
+'�?ด�?ุ�?ม�?า�?�?ะ�?าทที�?ห�?�?าต�?า�? preview'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/i_fa fa-times w3-xlarge w3-tex'))
 
-'-ทำเ�?รื�?อ�?หมาย�?าถู�?หลั�?ราย�?ารที�?เลือ�? สิ�?�?สุด�?ารทดสอ�?�?�?อมูล multiple วั�?ที�? 11/10/2017-31/10/2017 �?ดย�?ด preview �?ละ�?ดเลือ�?ราย�?าร'
+'-ทำเ�?รื�?อ�?หมาย�?าถู�?หลั�?ราย�?ารที�?เลือ�? สิ�?�?สุด�?ารทดสอ�?�?�?อมูล multiple วั�?ที�? 11/10/2017-31/10/2017 �?ดย�?ด preview �?ละ�?ดเลือ�?ราย�?าร'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/input_ng-valid ng-dirty ng-tou'))
 
-'---ตรว�?สอ�?�?ล'
+'---ตรว�?สอ�?�?ล'
 WebUI.verifyElementPresent(findTestObject('Search history log/search history log//td_Survey Multiple'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
-'เลือ�?�?ระเภท�?ารทำ�?าย เ�?�?�? all'
+'เลือ�?�?ระเภท�?ารทำ�?าย เ�?�?�? all'
 WebUI.selectOptionByIndex(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/select_serach_type'), 
     '0', FailureHandling.STOP_ON_FAILURE)
 
-'เอาเ�?อเ�?อร�?�?ี�?ที�?�?�?ล�? single เ�?ื�?อดู preview'
+'Show preview ----> Cursor mouse at sigle file '
 WebUI.mouseOver(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/span_'))
 
-'ตรว�?สอ�? pop up preview �?อ�?�?�?ล�? single'
+'verify pop up preview -->sigle file'
 WebUI.verifyElementPresent(findTestObject('Search history log/search history log/div_ngxp__container ngxp__008'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
-'�?ด�?ุ�?ม preview �?อ�?�?�?ล�? multiple'
+'�?ด�?ุ�?ม preview �?อ�?�?�?ล�? multiple'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/button_Preview'))
 
-'�?ด�?ุ�?ม�?า�?�?ะ�?าทที�?ห�?�?าต�?า�? preview'
+'click X preview showing'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/i_fa fa-times w3-xlarge w3-tex'))
 
-'-�?ด�?ุ�?ม export สิ�?�?สุด�?ารทดสอ�?�?�?อมูลทั�?�?หมด (All) วั�?ที�? 11/10/2017-31/11/2017 �?ดย�?ด preview �?ละ�?ด export'
+'-�?ด�?ุ�?ม export สิ�?�?สุด�?ารทดสอ�?�?�?อมูลทั�?�?หมด (All) วั�?ที�? 11/10/2017-31/11/2017 �?ดย�?ด preview �?ละ�?ด export'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/button_Export'))
 
-'---ตรว�?สอ�?�?ล'
+'---ตรว�?สอ�?�?ล'
 WebUI.verifyElementPresent(findTestObject('Search history log/search history log/td_Survey Single'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
-'---ตรว�?สอ�?�?ล'
+'---ตรว�?สอ�?�?ล'
 WebUI.verifyElementPresent(findTestObject('Search history log/search history log//td_Survey Multiple'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
-'เลือ�?�?ระเภท�?ารทำ�?าย เ�?�?�? single'
+'select precit type -->single'
 WebUI.selectOptionByValue(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/select_serach_type'), 
     '1', true)
 
-'เอาเ�?อเ�?อร�?�?ี�?ที�?�?�?ล�? single เ�?ื�?อดู preview'
+'Show preview ----> Cursor mouse at sigle file '
 WebUI.mouseOver(findTestObject('Search history log/search history log/span_12'))
 
-'ตรว�?สอ�? pop up preview �?อ�?�?�?ล�? single'
+'verify pop up preview -->sigle file'
 WebUI.verifyElementPresent(findTestObject('Search history log/search history log/div_ngxp__container ngxp__008'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
-'-�?ด�?ุ�?ม export สิ�?�?สุด�?ารทดสอ�?�?�?อมูล single วั�?ที�? 11/10/2017-31/11/2017 �?ดย�?ด preview �?ละ�?ด export'
+'-�?ด�?ุ�?ม export สิ�?�?สุด�?ารทดสอ�?�?�?อมูล single วั�?ที�? 11/10/2017-31/11/2017 �?ดย�?ด preview �?ละ�?ด export'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/button_Export'))
 
-'---ตรว�?สอ�?�?ล'
+'---ตรว�?สอ�?�?ล'
 WebUI.verifyElementPresent(findTestObject('Search history log/search history log/td_Survey Single'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
-'เลือ�?�?ระเภท�?ารทำ�?าย เ�?�?�? multiple'
+'select precit type --> multiple'
 WebUI.selectOptionByValue(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/select_serach_type'), 
     '2', true)
 
-'�?ด�?ุ�?ม preview �?อ�?�?�?ล�? multiple'
+'click preview button -->multiple file'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/button_Preview'))
 
-'�?ด�?ุ�?ม�?า�?�?ะ�?าทที�?ห�?�?าต�?า�? preview'
+'click X preview showing'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/i_fa fa-times w3-xlarge w3-tex'))
 
-'-�?ด�?ุ�?ม export สิ�?�?สุด�?ารทดสอ�?�?�?อมูล multiple วั�?ที�? 11/10/2017-31/11/2017 �?ดย�?ด preview �?ละ�?ด export'
+'-�?ด�?ุ�?ม export สิ�?�?สุด�?ารทดสอ�?�?�?อมูล multiple วั�?ที�? 11/10/2017-31/11/2017 �?ดย�?ด preview �?ละ�?ด export'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/button_Export'))
 
-'---ตรว�?สอ�?�?ล'
+'---ตรว�?สอ�?�?ล'
 WebUI.verifyElementPresent(findTestObject('Search history log/search history log//td_Survey Multiple'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
-'เลือ�?�?ระเภท�?ารทำ�?าย เ�?�?�? all'
+'เลือ�?�?ระเภท�?ารทำ�?าย เ�?�?�? all'
 WebUI.selectOptionByIndex(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/select_serach_type'), 
     '0')
 
-'�?ด�?า�?ะ�?าทล�?วั�?ที�? input �?�?า�?ห�?�?า'
+'�?ด�?า�?ะ�?าทล�?วั�?ที�? input �?�?า�?ห�?�?า'
 WebUI.click(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/span_mydpicon icon-mydpremove'))
 
-'---ตรว�?สอ�?�?ล'
+'---ตรว�?สอ�?�?ล'
 WebUI.verifyElementNotPresent(findTestObject('Search history log/search history log//button_Preview'), 5)
 
 not_run: WebUI.selectOptionByIndex(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/select_serach_type'), 
     '0', FailureHandling.STOP_ON_FAILURE)
 
-'�?ส�?�?�?อมูลวั�?ที�?�?�? input หลั�?'
+'�?ส�?�?�?อมูลวั�?ที�?�?�? input หลั�?'
 WebUI.setText(findTestObject('Search history log/search history log/Page_Guru TMDA (1)/input_selection ng-valid ng-di'), 
     '02/11/2017')
 
-WebUI.closeBrowser()
+not_run: WebUI.closeBrowser()
 

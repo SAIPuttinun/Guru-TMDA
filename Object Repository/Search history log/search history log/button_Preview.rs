@@ -4,6 +4,12 @@
    <name>button_Preview</name>
    <tag></tag>
    <elementGuidId>78112bb4-be94-401a-a965-290db66a5ea5</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//button[count(. | //*[@class = 'btn btn-block w3-text-white w3-padding-small']) = count(//*[@class = 'btn btn-block w3-text-white w3-padding-small'])][count(. | //*[text() = 'Preview']) = count(//*[text() = 'Preview'])]</value>
+      </entry>
+   </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
@@ -28,7 +34,7 @@
       <value>Preview</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>

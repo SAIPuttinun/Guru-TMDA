@@ -20,19 +20,19 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-not_run: WebUI.openBrowser('')
+WebUI.openBrowser('')
 
-not_run: WebUI.maximizeWindow()
+WebUI.maximizeWindow()
 
-not_run: WebUI.navigateToUrl('192.168.11.59')
+WebUI.navigateToUrl('192.168.11.59')
 
-not_run: WebUI.click(findTestObject('Page_Guru TMDA/span_Login'))
+WebUI.click(findTestObject('Page_Guru TMDA/span_Login'))
 
-not_run: WebUI.setText(findTestObject('Page_Guru TMDA (1)/input_ng-untouched ng-valid ng'), 'piew')
+WebUI.setText(findTestObject('Page_Guru TMDA (1)/input_ng-untouched ng-valid ng'), 'piew')
 
-not_run: WebUI.setText(findTestObject('Page_Guru TMDA (1)/input_ng-untouched ng-pristine'), 'piew')
+WebUI.setText(findTestObject('Page_Guru TMDA (1)/input_ng-untouched ng-pristine'), 'piew')
 
-not_run: WebUI.submit(findTestObject('Page_Guru TMDA (1)/button_Login'))
+WebUI.submit(findTestObject('Page_Guru TMDA (1)/button_Login'))
 
 WebUI.click(findTestObject('Change profile pic//a_User Management'))
 
@@ -51,5 +51,5 @@ WebUI.verifyElementPresent(findTestObject('Change profile pic/div_Edit Profile S
 
 WebUI.click(findTestObject('Change profile pic//button_'))
 
-not_run: WebUI.closeBrowser()
+WebUI.closeBrowser()
 
