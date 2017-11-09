@@ -4,7 +4,7 @@
    <name>Basic</name>
    <tag></tag>
    <isRerun>false</isRerun>
-   <lastRun>2017-11-09T16:13:40</lastRun>
+   <lastRun>2017-11-09T17:12:55</lastRun>
    <mailRecipient></mailRecipient>
    <numberOfRerun>0</numberOfRerun>
    <pageLoadTimeout>30</pageLoadTimeout>
@@ -70,12 +70,6 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/4. Menu User Management/Edit profile management</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>1660012f-ed92-49cd-85a5-a00704ff3888</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/4. Menu User Management/Change user profile picture</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>5449d816-0084-445e-a654-bb8fb1bfdc41</guid>

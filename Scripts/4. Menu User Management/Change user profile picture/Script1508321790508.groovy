@@ -42,6 +42,9 @@ WebUI.click(findTestObject('Change profile pic//i_fa fa-pencil-square-o'))
 
 WebUI.uploadFile(findTestObject('Change profile pic/input_file-input (1)'), 'C:\\Penguins.jpg')
 
+'�?ดสั�?ลั�?ษณ�?ดิ�?สอหลั�?�?ื�?อ'
+WebUI.click(findTestObject('Edit user profile/Edit//i_fa fa-pencil name'))
+
 WebUI.click(findTestObject('Change profile pic/button_SUBMIT (1)'))
 
 'ลบข้อความในกล่องข้อความ Password'

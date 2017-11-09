@@ -63,6 +63,8 @@ WebUI.click(findTestObject('Edit user profile/Edit/button_SUBMIT'), FailureHandl
 
 WebUI.verifyElementNotPresent(findTestObject('Edit user profile/Edit/div_Edit Profile Successful.'), 5)
 
+WebUI.uploadFile(findTestObject('Change profile pic/input_file-input (1)'), 'C:\\Penguins.jpg')
+
 '�?ดสั�?ลั�?ษณ�?ดิ�?สอหลั�?�?ื�?อ'
 WebUI.click(findTestObject('Edit user profile/Edit//i_fa fa-pencil name'))
 
