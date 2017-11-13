@@ -71,9 +71,6 @@ WebUI.selectOptionByValue(findTestObject('signup/signup/select_question'), '1', 
 'กรอกคำตอบ'
 WebUI.setText(findTestObject('signup/signup/input_answer'), 'Dog', FailureHandling.STOP_ON_FAILURE)
 
-'ยืนยันปุ่ม Sign Up ไม่สามารถคลิกได้'
-WebUI.verifyElementNotClickable(findTestObject('signup/signup/button_Sign Up'), FailureHandling.CONTINUE_ON_FAILURE)
-
 'เลือกรูปภาพจากเครื่อง'
 WebUI.uploadFile(findTestObject('signup/signup/input_file-input'), 'C:\\Penguins.jpg', FailureHandling.STOP_ON_FAILURE)
 
